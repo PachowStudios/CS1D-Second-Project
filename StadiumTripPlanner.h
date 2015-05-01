@@ -1,8 +1,9 @@
 #ifndef STADIUMTRIPPLANNER_H
 #define STADIUMTRIPPLANNER_H
 
-#include <QtWidgets/QMainWindow>
 #include "ui_StadiumTripPlanner.h"
+
+#include <QMainWindow>
 
 class StadiumTripPlanner : public QMainWindow
 {
@@ -13,7 +14,7 @@ public:
 	~StadiumTripPlanner();
 
 private:
-	Ui::StadiumTripPlannerClass ui;
+	Ui::StadiumTripPlanner ui;
 };
 
-#endif // STADIUMTRIPPLANNER_H
+#endif

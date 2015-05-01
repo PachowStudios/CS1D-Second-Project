@@ -121,7 +121,6 @@
   <ItemGroup>
     <ClInclude Include="Address.h" />
     <ClInclude Include="Date.h" />
-    <ClInclude Include="GeneratedFiles\ui_StadiumTripPlanner.h" />
     <ClInclude Include="Stadium.h" />
   </ItemGroup>
   <ItemGroup>

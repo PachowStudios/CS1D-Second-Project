@@ -1,10 +1,12 @@
 #include "StadiumTripPlanner.h"
-#include <QtWidgets/QApplication>
+
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {
-	QApplication a(argc, argv);
-	StadiumTripPlanner w;
-	w.show();
-	return a.exec();
+	QApplication app(argc, argv);
+
+	(new StadiumTripPlanner)->show();
+
+	return app.exec();
 }

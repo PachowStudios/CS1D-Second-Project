@@ -99,9 +99,6 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GeneratedFiles\ui_StadiumTripPlanner.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
     <ClInclude Include="Stadium.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
