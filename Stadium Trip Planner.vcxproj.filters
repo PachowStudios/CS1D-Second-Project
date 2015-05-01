@@ -112,4 +112,9 @@
       <Filter>Header Files\Core</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="JSON Data\Stadiums.json">
+      <Filter>JSON Data</Filter>
+    </None>
+  </ItemGroup>
 </Project>
