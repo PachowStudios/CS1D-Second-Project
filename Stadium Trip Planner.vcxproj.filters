@@ -57,6 +57,9 @@
     <Filter Include="Source Files\Core">
       <UniqueIdentifier>{87e1ccf9-caaa-42d9-bbeb-145f0696c87a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="JSON Data">
+      <UniqueIdentifier>{e6ec364e-21ab-48d5-86aa-ebbfe0b358f3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GeneratedFiles\Debug\moc_StadiumTripPlanner.cpp">
@@ -74,6 +77,15 @@
     <ClCompile Include="StadiumTripPlanner.cpp">
       <Filter>Source Files\GUI</Filter>
     </ClCompile>
+    <ClCompile Include="Stadium.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Address.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Date.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="StadiumTripPlanner.ui">
@@ -89,6 +101,15 @@
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_StadiumTripPlanner.h">
       <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stadium.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Address.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Date.h">
+      <Filter>Header Files\Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

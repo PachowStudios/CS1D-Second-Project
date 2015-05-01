@@ -76,6 +76,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Address.cpp" />
+    <ClCompile Include="Date.cpp" />
     <ClCompile Include="GeneratedFiles\Debug\moc_StadiumTripPlanner.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -89,6 +91,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Stadium.cpp" />
     <ClCompile Include="StadiumTripPlanner.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -116,7 +119,10 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Address.h" />
+    <ClInclude Include="Date.h" />
     <ClInclude Include="GeneratedFiles\ui_StadiumTripPlanner.h" />
+    <ClInclude Include="Stadium.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="StadiumTripPlanner.qrc">
