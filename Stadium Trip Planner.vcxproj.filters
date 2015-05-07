@@ -110,6 +110,24 @@
     <ClCompile Include="GeneratedFiles\Release\moc_NotEmptyValidator.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="SetLogin.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldsMatchValidator.cpp">
+      <Filter>Source Files\Validators</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_FieldsMatchValidator.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_FieldsMatchValidator.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SetLogin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SetLogin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="StadiumTripPlanner.ui">
@@ -130,6 +148,15 @@
     <CustomBuild Include="NotEmptyValidator.h">
       <Filter>Header Files\Validators</Filter>
     </CustomBuild>
+    <CustomBuild Include="SetLogin.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FieldsMatchValidator.h">
+      <Filter>Header Files\Validators</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SetLogin.h">
+      <Filter>Header Files\GUI</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stadium.h">
@@ -149,6 +176,15 @@
     </ClInclude>
     <ClInclude Include="SHA256.h">
       <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_SetLogin.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_AdminLogin.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_StadiumTripPlanner.h">
+      <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

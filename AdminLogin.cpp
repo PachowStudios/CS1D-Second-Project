@@ -11,9 +11,9 @@ AdminLogin::AdminLogin(QWidget *parent)
 	disconnect(ui.buttons, SIGNAL(accepted()),
 			   this,       SLOT(accept()));
 
-	connect(ui.usernameBox, SIGNAL(textChanged(cosnt QString&)),
+	connect(ui.usernameBox, SIGNAL(textChanged(const QString&)),
 			this,           SLOT(ValidateFields()));
-	connect(ui.passwordBox, SIGNAL(textChanged(cosnt QString&)),
+	connect(ui.passwordBox, SIGNAL(textChanged(const QString&)),
 			this,           SLOT(ValidateFields()));
 	connect(ui.buttons,     SIGNAL(accepted()),
 			this,           SLOT(Login()));
