@@ -89,11 +89,11 @@
     <property name="title">
      <string>Admin</string>
     </property>
-    <addaction name="adminMenuLogin"/>
+    <addaction name="adminMenuLoginLogout"/>
    </widget>
    <addaction name="adminMenu"/>
   </widget>
-  <action name="adminMenuLogin">
+  <action name="adminMenuLoginLogout">
    <property name="text">
     <string>Login</string>
    </property>
