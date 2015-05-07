@@ -77,6 +77,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Address.cpp" />
+    <ClCompile Include="Credential.cpp" />
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="GeneratedFiles\Debug\moc_StadiumTripPlanner.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
@@ -91,6 +92,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="SHA256.cpp" />
     <ClCompile Include="Stadium.cpp" />
     <ClCompile Include="StadiumTripPlanner.cpp" />
   </ItemGroup>
@@ -120,7 +123,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h" />
+    <ClInclude Include="Credential.h" />
     <ClInclude Include="Date.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="SHA256.h" />
     <ClInclude Include="Stadium.h" />
   </ItemGroup>
   <ItemGroup>
