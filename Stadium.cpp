@@ -4,42 +4,25 @@ Stadium::Stadium(QString name, QString team, int phoneNumber, int capacity, Addr
 	: name(name), team(team), phoneNumber(phoneNumber), capacity(capacity), address(address), dateOpened(dateOpened)
 { }
 
-bool Stadium::LoadFromJson(const QJsonObject &json, bool allowPartial)
+bool Stadium::LoadFromJson(const QJsonObject &json)
 {
-	if (json.contains("Name"))
-		name = json["Name"].toString();
-	else if (!allowPartial)
-		return false;
-
-	if (json.contains("Team"))
-		team = json["Team"].toString();
-	else if (!allowPartial)
-		return false;
-
-	if (json.contains("PhoneNumber"))
+	if (json.contains("Name")        &&
+		json.contains("Team")        &&
+		json.contains("PhoneNumber") &&
+		json.contains("Capacity")    &&
+		json.contains("Address")     &&
+		json.contains("DateOpened"))
+	{
+		name        = json["Name"].toString();
+		team        = json["Team"].toString();
 		phoneNumber = json["PhoneNumber"].toInt();
-	else if (!allowPartial)
-		return false;
-
-	if (json.contains("Capacity"))
-		capacity = json["Capacity"].toInt();
-	else if (!allowPartial)
-		return false;
-
-	if (json.contains("Address"))
-	{
-		if (!address.LoadFromJson(json["Address"].toObject()))
-			return false;
+		capacity    = json["Capacity"].toInt();
 	}
-	else if (!allowPartial)
+	else
 		return false;
 
-	if (json.contains("DateOpened"))
-	{
-		if (!dateOpened.LoadFromJson(json["DateOpened"].toObject()))
-			return false;
-	}
-	else if (!allowPartial)
+	if (!address.LoadFromJson(json["Address"].toObject()) ||
+		!dateOpened.LoadFromJson(json["DateOpened"].toObject()))
 		return false;
 
 	return true;

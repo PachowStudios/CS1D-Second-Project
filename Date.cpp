@@ -15,9 +15,7 @@ bool Date::LoadFromJson(const QJsonObject &json)
 		year  = json["Year"].toInt();
 	}
 	else
-	{
 		return false;
-	}
 
 	return true;
 }

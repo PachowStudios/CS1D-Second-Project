@@ -82,16 +82,22 @@
      <x>0</x>
      <y>0</y>
      <width>371</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuAdmin">
+   <widget class="QMenu" name="adminMenu">
     <property name="title">
      <string>Admin</string>
     </property>
+    <addaction name="adminMenuLogin"/>
    </widget>
-   <addaction name="menuAdmin"/>
+   <addaction name="adminMenu"/>
   </widget>
+  <action name="adminMenuLogin">
+   <property name="text">
+    <string>Login</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>

@@ -11,15 +11,13 @@ bool Address::LoadFromJson(const QJsonObject &json)
 		json.contains("State")  &&
 		json.contains("ZipCode"))
 	{
-		street      = json["Street"].toString();
-		city        = json["City"].toString();
-		state       = json["State"].toString();
-		zipCode     = json["ZipCode"].toInt();
+		street  = json["Street"].toString();
+		city    = json["City"].toString();
+		state   = json["State"].toString();
+		zipCode = json["ZipCode"].toInt();
 	}
 	else
-	{
 		return false;
-	}
 
 	return true;
 }

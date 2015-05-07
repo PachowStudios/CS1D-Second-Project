@@ -13,7 +13,7 @@ public:
 	Stadium() = default;
 	Stadium(QString name, QString team, int phoneNumber, int capacity, Address address, Date dateOpened);
 
-	bool        LoadFromJson(const QJsonObject &json, bool allowPartial = false);
+	bool        LoadFromJson(const QJsonObject &json);
 	QJsonObject SaveToJson() const;
 	
 	QString name = "";
