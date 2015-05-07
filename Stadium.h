@@ -5,6 +5,7 @@
 #include "Date.h"
 
 #include <QVariant>
+#include <QList>
 #include <QJsonObject>
 
 class Stadium
@@ -23,5 +24,7 @@ public:
 	Address address;
 	Date    dateOpened;
 };
+
+typedef QList<Stadium> StadiumList;
 
 #endif

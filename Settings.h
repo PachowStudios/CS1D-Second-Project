@@ -5,19 +5,35 @@
 #include "Credential.h"
 
 #include <QVariant>
+#include <QJsonDocument>
+#include <QJsonArray>
 #include <QJsonObject>
 #include <QSettings>
 #include <QStandardPaths>
+#include <QFile>
+
+enum SearchBy
+{
+	Name,
+	Team
+};
 
 class Settings
 {
 public:
 	Settings();
 
-	bool LoadCredentials();
-	void SaveCredentials();
+	bool     HasStadium(SearchBy searcyBy, QString searchTerm) const;
+	Stadium& GetStadium(SearchBy searchBy, QString searchTerm);
 
-	Credential adminLogin;
+	bool LoadCredentials();
+	bool SaveCredentials();
+
+	bool LoadStadiums(QString fileName = nullptr);
+	bool SaveStadiums();
+
+	Credential  adminLogin;
+	StadiumList stadiums;
 
 private:
 	const QString CompanyName = "ScrumShot";
