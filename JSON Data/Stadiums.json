@@ -7,7 +7,7 @@
 			"League": "American",
 			"Grass": true,
 			"Capacity": 45483,
-			"PhoneNumber": 7149402000,
+			"PhoneNumber": "(714) 940-2000",
 			"DateOpened":
 			{
 				"Month": 4,
@@ -20,6 +20,27 @@
 				"City": "Anaheim",
 				"State": "CA",
 				"ZipCode": 92806
+			}
+		},
+		{
+			"Name": "Comerica Park",
+			"Team": "Detroit Tigers",
+			"League": "National",
+			"Grass": false,
+			"Capacity": 41681,
+			"PhoneNumber": "(313) 962-4000",
+			"DateOpened":
+			{
+				"Month": 4,
+				"Day": 11,
+				"Year": 2000
+			},
+			"Address":
+			{
+				"Street": "2100 Woodward Ave",
+				"City": "Detroit",
+				"State": "MI",
+				"ZipCode": 48201
 			}
 		}
 	]

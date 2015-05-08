@@ -59,8 +59,8 @@ QVariant StadiumTableModel::data(const QModelIndex &index, int role) const
 			case Team:        return stadium.team;
 			case League:      return Stadium::LeagueToString(stadium.league);
 			case Grass:       return stadium.grass ? "Yes" : "No";
-			case Capacity:    return stadium.capacity;
-			case DateOpened:  return stadium.dateOpened.ToString();
+			case Capacity:    return QLocale().toString(stadium.capacity);
+			case DateOpened:  return stadium.dateOpened.toString("MMMM d, yyyy");
 			case Address:     return stadium.address.ToString();
 			case PhoneNumber: return stadium.phoneNumber;
 		}

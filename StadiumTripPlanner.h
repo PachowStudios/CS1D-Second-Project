@@ -2,6 +2,7 @@
 #define STADIUMTRIPPLANNER_H
 
 #include "ui_StadiumTripPlanner.h"
+#include "StadiumView.h"
 #include "AdminLogin.h"
 
 #include <QMainWindow>
@@ -21,6 +22,7 @@ private:
 	bool loggedIn = false;
 
 	private slots:
+	void ViewStadiums() const;
 	void LoginLogout();
 };
 

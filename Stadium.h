@@ -31,7 +31,7 @@ public:
 	League  league = American;
 	bool    grass = false;
 	int     capacity = 0;
-	int     phoneNumber = 0;
+	QString phoneNumber = "";
 	Date    dateOpened;
 	Address address;
 };

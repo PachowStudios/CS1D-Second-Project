@@ -4,6 +4,7 @@
 #include "Stadium.h"
 
 #include <QAbstractTableModel>
+#include <QLocale>
 
 class StadiumTableModel : public QAbstractTableModel
 {

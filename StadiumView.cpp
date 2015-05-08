@@ -14,5 +14,5 @@ StadiumView::StadiumView(QWidget *parent)
 	connect(ui.buttons, SIGNAL(rejected()),
 			this,       SLOT(reject()));
 
-	ui.stadiumTable->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeMode::Interactive);
+	ui.stadiumTable->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeMode::ResizeToContents);
 }

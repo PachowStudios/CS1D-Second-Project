@@ -20,7 +20,7 @@ bool Stadium::LoadFromJson(const QJsonObject &json)
 		league      = StringToLeague(json["League"].toString());
 		grass       = json["Grass"].toBool();
 		capacity    = json["Capacity"].toInt();
-		phoneNumber = json["PhoneNumber"].toInt();
+		phoneNumber = json["PhoneNumber"].toString();
 	}
 	else
 		return false;

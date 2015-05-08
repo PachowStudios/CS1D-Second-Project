@@ -6,6 +6,8 @@ StadiumTripPlanner::StadiumTripPlanner(QWidget *parent)
 	ui.setupUi(this);
 	setWindowFlags(windowFlags() | Qt::MSWindowsFixedSizeDialogHint);
 
+	connect(ui.viewStadiumsButton,   SIGNAL(clicked()),
+			this,                    SLOT(ViewStadiums()));
 	connect(ui.adminMenuLoginLogout, SIGNAL(triggered()),
 			this,                    SLOT(LoginLogout()));
 	connect(ui.dialogButtons,        SIGNAL(rejected()),
@@ -14,6 +16,11 @@ StadiumTripPlanner::StadiumTripPlanner(QWidget *parent)
 
 StadiumTripPlanner::~StadiumTripPlanner()
 { }
+
+void StadiumTripPlanner::ViewStadiums() const
+{
+	(new StadiumView)->exec();
+}
 
 void StadiumTripPlanner::LoginLogout()
 {

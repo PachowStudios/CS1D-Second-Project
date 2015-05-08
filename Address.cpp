@@ -36,5 +36,5 @@ QJsonObject Address::SaveToJson() const
 
 QString Address::ToString() const
 {
-	return street + "\n" + city + ", " + state + "\n" + zipCode;
+	return QString(street + " " + city + ", " + state + " " + "%1").arg(zipCode);
 }
