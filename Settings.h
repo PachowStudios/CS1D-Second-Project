@@ -12,15 +12,15 @@
 #include <QStandardPaths>
 #include <QFile>
 
-enum SearchBy
-{
-	Name,
-	Team
-};
-
 class Settings
 {
 public:
+	enum SearchBy
+	{
+		Name,
+		Team
+	};
+
 	Settings();
 
 	bool     HasStadium(SearchBy searcyBy, QString searchTerm) const;

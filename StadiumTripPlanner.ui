@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>StadiumTripPlanner</string>
+   <string>Stadium Trip Planner</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QDialogButtonBox" name="dialogButtons">

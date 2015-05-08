@@ -4,20 +4,22 @@
 		{
 			"Name": "Angels Stadium of Anaheim",
 			"Team": "Los Angeles Angels of Anaheim",
-			"PhoneNumber": 7149402000,
+			"League": "American",
+			"Grass": true,
 			"Capacity": 45483,
+			"PhoneNumber": 7149402000,
+			"DateOpened":
+			{
+				"Month": 4,
+				"Day": 19,
+				"Year": 1996
+			},
 			"Address":
 			{
 				"Street": "2000 E Gene Autry Way",
 				"City": "Anaheim",
 				"State": "CA",
 				"ZipCode": 92806
-			},
-			"DateOpened":
-			{
-				"Month": 4,
-				"Day": 19,
-				"Year", 1996
 			}
 		}
 	]

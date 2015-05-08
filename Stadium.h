@@ -11,18 +11,29 @@
 class Stadium
 {
 public:
+	enum League
+	{
+		American,
+		National
+	};
+
 	Stadium() = default;
 	Stadium(QString name, QString team, int phoneNumber, int capacity, Address address, Date dateOpened);
 
 	bool        LoadFromJson(const QJsonObject &json);
 	QJsonObject SaveToJson() const;
+
+	static League  StringToLeague(QString league);
+	static QString LeagueToString(League league);
 	
 	QString name = "";
 	QString team = "";
-	int     phoneNumber = 0;
+	League  league = American;
+	bool    grass = false;
 	int     capacity = 0;
-	Address address;
+	int     phoneNumber = 0;
 	Date    dateOpened;
+	Address address;
 };
 
 typedef QList<Stadium> StadiumList;

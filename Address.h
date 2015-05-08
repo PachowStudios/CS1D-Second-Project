@@ -12,6 +12,7 @@ public:
 
 	bool        LoadFromJson(const QJsonObject &json);
 	QJsonObject SaveToJson() const;
+	QString     ToString() const;
 	
 	QString street = "";
 	QString city = "";

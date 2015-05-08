@@ -8,21 +8,25 @@ bool Stadium::LoadFromJson(const QJsonObject &json)
 {
 	if (json.contains("Name")        &&
 		json.contains("Team")        &&
-		json.contains("PhoneNumber") &&
+		json.contains("League")      &&
+		json.contains("Grass")       &&
 		json.contains("Capacity")    &&
-		json.contains("Address")     &&
-		json.contains("DateOpened"))
+		json.contains("PhoneNumber") &&
+		json.contains("DateOpened")  &&
+		json.contains("Address"))
 	{
 		name        = json["Name"].toString();
 		team        = json["Team"].toString();
-		phoneNumber = json["PhoneNumber"].toInt();
+		league      = StringToLeague(json["League"].toString());
+		grass       = json["Grass"].toBool();
 		capacity    = json["Capacity"].toInt();
+		phoneNumber = json["PhoneNumber"].toInt();
 	}
 	else
 		return false;
 
-	if (!address.LoadFromJson(json["Address"].toObject()) ||
-		!dateOpened.LoadFromJson(json["DateOpened"].toObject()))
+	if (!dateOpened.LoadFromJson(json["DateOpened"].toObject()) ||
+		!address.LoadFromJson(json["Address"].toObject()))
 		return false;
 
 	return true;
@@ -34,10 +38,32 @@ QJsonObject Stadium::SaveToJson() const
 
 	json["Name"]        = name;
 	json["Team"]        = team;
-	json["PhoneNumber"] = phoneNumber;
+	json["League"]      = LeagueToString(league);
+	json["Grass"]       = grass;
 	json["Capacity"]    = capacity;
-	json["Address"]     = address.SaveToJson();
+	json["PhoneNumber"] = phoneNumber;
 	json["DateOpened"]  = dateOpened.SaveToJson();
+	json["Address"]     = address.SaveToJson();
 
 	return json;
+}
+
+Stadium::League Stadium::StringToLeague(QString league)
+{
+	if (league == "American")
+		return American;
+	else if (league == "National")
+		return National;
+	else
+		return American;
+}
+
+QString Stadium::LeagueToString(Stadium::League league)
+{
+	switch (league)
+	{
+		case American: return "American";
+		case National: return "National";
+		default:       return "Invalid League";
+	}
 }
