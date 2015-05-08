@@ -1,7 +1,6 @@
 #ifndef STADIUMTABLEMODEL_H
 #define STADIUMTABLEMODEL_H
 
-#include "Settings.h"
 #include "Stadium.h"
 
 #include <QAbstractTableModel>

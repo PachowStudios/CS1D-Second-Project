@@ -164,6 +164,24 @@
     <ClCompile Include="GeneratedFiles\Release\moc_StadiumView.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="LoadStadiumFile.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_LoadStadiumFile.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_LoadStadiumFile.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="FileValidator.cpp">
+      <Filter>Source Files\Validators</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_FileValidator.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_FileValidator.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="StadiumTripPlanner.ui">
@@ -211,6 +229,15 @@
     <CustomBuild Include="StadiumView.h">
       <Filter>Header Files\GUI</Filter>
     </CustomBuild>
+    <CustomBuild Include="LoadStadiumFile.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LoadStadiumFile.h">
+      <Filter>Header Files\GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FileValidator.h">
+      <Filter>Header Files\Validators</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stadium.h">
@@ -244,6 +271,9 @@
       <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_StadiumView.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_LoadStadiumFile.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>

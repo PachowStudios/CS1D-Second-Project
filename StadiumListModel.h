@@ -1,7 +1,7 @@
 #ifndef STADIUMLISTMODEL_H
 #define STADIUMLISTMODEL_H
 
-#include "Settings.h"
+#include "Stadium.h"
 
 #include <QAbstractListModel>
 

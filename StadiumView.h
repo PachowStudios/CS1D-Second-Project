@@ -16,6 +16,8 @@ public:
 
 private:
 	Ui::StadiumView ui;
+
+	StadiumTableModel *stadiumTableModel = nullptr;
 };
 
 #endif
