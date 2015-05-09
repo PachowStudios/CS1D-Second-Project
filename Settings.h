@@ -3,6 +3,7 @@
 
 #include "Stadium.h"
 #include "Credential.h"
+#include "Graph.h"
 
 #include <QVariant>
 #include <QJsonDocument>
@@ -17,6 +18,7 @@ class Settings
 public:
 	enum SearchBy
 	{
+		ID,
 		Name,
 		Team
 	};
@@ -34,6 +36,7 @@ public:
 
 	Credential  adminLogin;
 	StadiumList stadiums;
+	Graph stadiumGraph;
 
 private:
 	const QString CompanyName = "ScrumShot";

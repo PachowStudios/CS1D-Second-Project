@@ -19,6 +19,8 @@ bool Settings::HasStadium(SearchBy searchBy, QString searchTerm) const
 	              {
 					  switch (searchBy)
 					  {
+						  case ID:
+							  return s.ID == searchTerm.toInt();
 						  case Name: 
 							  return s.name == searchTerm;
 						  case Team:
@@ -39,6 +41,8 @@ Stadium& Settings::GetStadium(SearchBy searchBy, QString searchTerm)
 	                {
 						switch (searchBy)
 						{
+							case ID:
+								return s.ID == searchTerm.toInt();
 							case Name:
 								return s.name == searchTerm;
 							case Team:
@@ -82,16 +86,28 @@ bool Settings::LoadStadiums(QString fileName)
 		return false;
 
 	QJsonDocument jsonDoc = QJsonDocument::fromJson(loadFile.readAll());
-	QJsonArray stadiumJsonArray;
-	
-	if (jsonDoc.isObject() && jsonDoc.object()["Stadiums"].isArray())
-		stadiumJsonArray = jsonDoc.object()["Stadiums"].toArray();
+	QJsonObject jsonDocObject;
+
+	if (jsonDoc.isObject())
+		jsonDocObject = jsonDoc.object();
 	else
 		return false;
 
-	for (int i = 0; i < stadiumJsonArray.size(); i++)
+	QJsonArray stadiumJsonArray;
+	QJsonArray graphJsonArray;
+	
+	if (jsonDocObject["Stadiums"].isArray() &&
+		jsonDocObject["Graph"].isArray())
 	{
-		QJsonObject stadiumJson = stadiumJsonArray[i].toObject();
+		stadiumJsonArray = jsonDocObject["Stadiums"].toArray();
+		graphJsonArray = jsonDocObject["Graph"].toArray();
+	}
+	else
+		return false;
+
+	for (auto &arrayItem : stadiumJsonArray)
+	{
+		QJsonObject stadiumJson = arrayItem.toObject();
 
 		if (stadiumJson.contains("Name"))
 		{
@@ -102,9 +118,24 @@ bool Settings::LoadStadiums(QString fileName)
 				Stadium stadiumObject;
 
 				if (stadiumObject.LoadFromJson(stadiumJson))
+				{
 					stadiums.append(stadiumObject);
+					stadiumGraph.AddNode(stadiumObject.ID);
+				}
 			}
 		}
+	}
+
+	for (auto &arrayItem : graphJsonArray)
+	{
+		QJsonObject graphLinkJson = arrayItem.toObject();
+
+		if (graphLinkJson.contains("A") &&
+			graphLinkJson.contains("B") &&
+			graphLinkJson.contains("Weight"))
+			stadiumGraph.SetConnection(graphLinkJson["A"].toInt(),
+									   graphLinkJson["B"].toInt(),
+									   graphLinkJson["Weight"].toInt());
 	}
 
 	return true;
@@ -119,13 +150,16 @@ bool Settings::SaveStadiums()
 
 	QJsonObject jsonDoc;
 	QJsonArray stadiumJsonArray;
+	QJsonArray graphJsonArray;
 
-	for each (Stadium stadium in stadiums)
+	for (auto &stadium : stadiums)
 		stadiumJsonArray.append(stadium.SaveToJson());
+
+
 
 	jsonDoc["Stadiums"] = stadiumJsonArray;
 
-	saveFile.write(QJsonDocument(stadiumJsonArray).toJson());
+	saveFile.write(QJsonDocument(jsonDoc).toJson());
 
 	return true;
 }

@@ -137,8 +137,8 @@ void SHA256::Transform(const uint8 *message, uint32 transformBlock)
 			SHA2_PACK32(&subBlock[j << 2], &w[j]);
 
 		for (j = 16; j < 64; j++)
-			w[j] = SHA256_F4(w[j - 2]) + w[j - 7]
-			+ SHA256_F3(w[j - 15]) + w[j - 16];
+			w[j] = SHA256_F4(w[j - 2]) + w[j - 7] 
+			     + SHA256_F3(w[j - 15]) + w[j - 16];
 
 		for (j = 0; j < 8; j++)
 			wv[j] = sha256_h[j];
@@ -146,11 +146,11 @@ void SHA256::Transform(const uint8 *message, uint32 transformBlock)
 		for (j = 0; j < 64; j++)
 		{
 			t1 = SHA256_F2(wv[4])
-				+ SHA2_CH(wv[4], wv[5], wv[6])
-				+ sha256_k[j] + w[j] + wv[7];
+			   + SHA2_CH(wv[4], wv[5], wv[6])
+			   + sha256_k[j] + w[j] + wv[7];
 
 			t2 = SHA256_F1(wv[0])
-				+ SHA2_MAJ(wv[0], wv[1], wv[2]);
+			   + SHA2_MAJ(wv[0], wv[1], wv[2]);
 
 			wv[7] = wv[6];
 			wv[6] = wv[5];

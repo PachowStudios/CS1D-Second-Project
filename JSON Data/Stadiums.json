@@ -46,7 +46,7 @@
 			}
 		}
 	],
-	"Connections":
+	"Graph":
 	[
 		{
 			"A": 0,
