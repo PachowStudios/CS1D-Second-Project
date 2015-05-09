@@ -1,12 +1,17 @@
 #include "Stadium.h"
 
-Stadium::Stadium(QString name, QString team, int phoneNumber, int capacity, Address address, Date dateOpened)
-	: name(name), team(team), phoneNumber(phoneNumber), capacity(capacity), address(address), dateOpened(dateOpened)
+Stadium::Stadium(int ID, QString name, QString team, 
+				 int phoneNumber, int capacity, 
+				 Address address, Date dateOpened)
+	: ID(ID), name(name), team(team), 
+	  phoneNumber(phoneNumber), capacity(capacity), 
+	  address(address), dateOpened(dateOpened)
 { }
 
 bool Stadium::LoadFromJson(const QJsonObject &json)
 {
-	if (json.contains("Name")        &&
+	if (json.contains("ID")          &&
+		json.contains("Name")        &&
 		json.contains("Team")        &&
 		json.contains("League")      &&
 		json.contains("Grass")       &&
@@ -15,6 +20,7 @@ bool Stadium::LoadFromJson(const QJsonObject &json)
 		json.contains("DateOpened")  &&
 		json.contains("Address"))
 	{
+		ID          = json["ID"].toInt();
 		name        = json["Name"].toString();
 		team        = json["Team"].toString();
 		league      = StringToLeague(json["League"].toString());
@@ -36,6 +42,7 @@ QJsonObject Stadium::SaveToJson() const
 {
 	QJsonObject json;
 
+	json["ID"]          = ID;
 	json["Name"]        = name;
 	json["Team"]        = team;
 	json["League"]      = LeagueToString(league);

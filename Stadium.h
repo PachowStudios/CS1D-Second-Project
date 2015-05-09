@@ -18,7 +18,9 @@ public:
 	};
 
 	Stadium() = default;
-	Stadium(QString name, QString team, int phoneNumber, int capacity, Address address, Date dateOpened);
+	Stadium(int ID, QString name, QString team, 
+			int phoneNumber, int capacity, 
+			Address address, Date dateOpened);
 
 	bool        LoadFromJson(const QJsonObject &json);
 	QJsonObject SaveToJson() const;
@@ -26,6 +28,7 @@ public:
 	static League  StringToLeague(QString league);
 	static QString LeagueToString(League league);
 	
+	int     ID = 0;
 	QString name = "";
 	QString team = "";
 	League  league = American;

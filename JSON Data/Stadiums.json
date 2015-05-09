@@ -2,6 +2,7 @@
 	"Stadiums":
 	[
 		{
+			"ID": 0,
 			"Name": "Angels Stadium of Anaheim",
 			"Team": "Los Angeles Angels of Anaheim",
 			"League": "American",
@@ -23,6 +24,7 @@
 			}
 		},
 		{
+			"ID": 1,
 			"Name": "Comerica Park",
 			"Team": "Detroit Tigers",
 			"League": "National",
@@ -42,6 +44,14 @@
 				"State": "MI",
 				"ZipCode": 48201
 			}
+		}
+	],
+	"Connections":
+	[
+		{
+			"A": 0,
+			"B": 1,
+			"Weight": 50
 		}
 	]
 }
