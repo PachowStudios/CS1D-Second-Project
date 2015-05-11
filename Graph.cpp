@@ -44,3 +44,69 @@ bool Graph::RemoveConnection(int a, int b)
 
 	return true;
 }
+
+QList<int> Graph::CalculatePath(int start, int finish) const
+{
+	if (!nodes.contains(start) || !nodes.contains(finish))
+		return QList<int>();
+
+	QHash<int, int> distances;
+	QHash<int, int> previous;
+	QList<int> tempNodes;
+	QList<int> path;
+
+	auto comparator = [&](int left, int right)
+	{
+		return distances[left] > distances[right];
+	};
+
+	for (GraphIterator vertex = vertices.begin(); 
+		 vertex != vertices.end(); 
+		 vertex++)
+	{
+		if (vertex.key() == start)
+			distances[vertex.key()] = 0;
+		else
+			distances[vertex.key()] = std::numeric_limits<int>::max();
+
+		tempNodes.push_back(vertex.key());
+		std::push_heap(tempNodes.begin(), tempNodes.end(), comparator);
+	}
+
+	while (!tempNodes.empty())
+	{
+		std::pop_heap(tempNodes.begin(), tempNodes.end(), comparator);
+		int smallest = tempNodes.back();
+		tempNodes.pop_back();
+
+		if (smallest == finish)
+		{
+			while (previous.find(smallest) != previous.end())
+			{
+				path.push_back(smallest);
+				smallest = previous[smallest];
+			}
+
+			break;
+		}
+
+		if (distances[smallest] = std::numeric_limits<int>::max())
+			break;
+
+		for (VertexIterator neighbor = vertices[smallest].begin(); 
+			 neighbor != vertices[smallest].end; 
+			 neighbor++)
+		{
+			int alt = distances[smallest] + neighbor.value();
+
+			if (alt < distances[neighbor.key()])
+			{
+				distances[neighbor.key()] = alt;
+				previous[neighbor.key()] = smallest;
+				std::make_heap(tempNodes.begin(), tempNodes.end(), comparator);
+			}
+		}
+	}
+
+	return path;
+}
