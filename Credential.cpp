@@ -16,6 +16,11 @@ void Credential::SetPassword(QString password)
 	passwordHash = SHA256::Hash(password);
 }
 
+void Credential::SetEncryptedPassword(QString password)
+{
+	passwordHash = password;
+}
+
 bool Credential::Authenticate(QString username, QString password)
 {
 	return username == this->username &&

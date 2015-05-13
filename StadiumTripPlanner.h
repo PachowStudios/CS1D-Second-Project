@@ -4,6 +4,7 @@
 #include "ui_StadiumTripPlanner.h"
 #include "StadiumView.h"
 #include "AdminLogin.h"
+#include "SouvenirEdit.h"
 
 #include <QMainWindow>
 #include <QMessageBox>
@@ -17,6 +18,8 @@ public:
 	~StadiumTripPlanner();
 
 private:
+	void SetAdminOptionsEnabled(bool enabled);
+
 	Ui::StadiumTripPlanner ui;
 
 	bool loggedIn = false;
@@ -24,6 +27,7 @@ private:
 	private slots:
 	void ViewStadiums() const;
 	void LoginLogout();
+	void EditSouvenirs() const;
 };
 
 #endif

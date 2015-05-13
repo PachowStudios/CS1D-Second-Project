@@ -103,12 +103,21 @@
      <string>Admin</string>
     </property>
     <addaction name="adminMenuLoginLogout"/>
+    <addaction name="adminMenuEditSouvenirs"/>
    </widget>
    <addaction name="adminMenu"/>
   </widget>
   <action name="adminMenuLoginLogout">
    <property name="text">
     <string>Login</string>
+   </property>
+  </action>
+  <action name="adminMenuEditSouvenirs">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Edit Souvenirs</string>
    </property>
   </action>
  </widget>

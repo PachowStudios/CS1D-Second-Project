@@ -15,6 +15,7 @@ public:
 
 	void SetUsername(QString username);
 	void SetPassword(QString password);
+	void SetEncryptedPassword(QString password);
 	bool Authenticate(QString username, QString password);
 
 private:

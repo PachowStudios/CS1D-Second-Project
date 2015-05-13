@@ -79,7 +79,7 @@ bool Settings::LoadCredentials()
 		qSettings.contains(PasswordPath))
 	{
 		adminLogin.SetUsername(qSettings.value(UsernamePath).toString());
-		adminLogin.SetPassword(qSettings.value(PasswordPath).toString());
+		adminLogin.SetEncryptedPassword(qSettings.value(PasswordPath).toString());
 	}
 	else
 		return false;
