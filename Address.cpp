@@ -1,6 +1,6 @@
 #include "Address.h"
 
-Address::Address(QString street, QString city, QString state, int zipCode)
+Address::Address(QString street, QString city, QString state, QString zipCode)
 	: street(street), city(city), state(state), zipCode(zipCode)
 { }
 
@@ -14,7 +14,7 @@ bool Address::LoadFromJson(const QJsonObject &json)
 		street  = json["Street"].toString();
 		city    = json["City"].toString();
 		state   = json["State"].toString();
-		zipCode = json["ZipCode"].toInt();
+		zipCode = json["ZipCode"].toString();
 	}
 	else
 		return false;

@@ -3,6 +3,8 @@
 
 #include <QHash>
 #include <QList>
+#include <QJsonObject>
+#include <QJsonArray>
 #include <algorithm>
 #include <limits>
 
@@ -10,6 +12,9 @@ class Graph
 {
 public:
 	Graph() = default;
+
+	bool LoadFromJson(const QJsonArray &json);
+
 
 	bool AddNode(int ID);
 	bool RemoveNode(int ID);

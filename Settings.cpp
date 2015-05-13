@@ -126,17 +126,8 @@ bool Settings::LoadStadiums(QString fileName)
 		}
 	}
 
-	for (auto &arrayItem : graphJsonArray)
-	{
-		QJsonObject graphLinkJson = arrayItem.toObject();
-
-		if (graphLinkJson.contains("A") &&
-			graphLinkJson.contains("B") &&
-			graphLinkJson.contains("Weight"))
-			stadiumGraph.SetConnection(graphLinkJson["A"].toInt(),
-									   graphLinkJson["B"].toInt(),
-									   graphLinkJson["Weight"].toInt());
-	}
+	if (!stadiumGraph.LoadFromJson(graphJsonArray))
+		return false;
 
 	return true;
 }

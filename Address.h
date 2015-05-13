@@ -8,7 +8,7 @@ class Address
 {
 public:
 	Address() = default;
-	Address(QString street, QString city, QString state, int zipCode);
+	Address(QString street, QString city, QString state, QString zipCode);
 
 	bool        LoadFromJson(const QJsonObject &json);
 	QJsonObject SaveToJson() const;
@@ -17,7 +17,7 @@ public:
 	QString street = "";
 	QString city = "";
 	QString state = "";
-	int     zipCode = 0;
+	QString zipCode = "";
 };
 
 #endif

@@ -1,5 +1,24 @@
 #include "Graph.h"
 
+bool Graph::LoadFromJson(const QJsonArray &json)
+{
+	for (auto &arrayItem : json)
+	{
+		QJsonObject connectionJson = arrayItem.toObject();
+
+		if (connectionJson.contains("A") &&
+			connectionJson.contains("B") &&
+			connectionJson.contains("Weight"))
+			SetConnection(connectionJson["A"].toInt(),
+			              connectionJson["B"].toInt(),
+			              connectionJson["Weight"].toInt());
+		else
+			return false;
+	}
+
+	return true;
+}
+
 bool Graph::AddNode(int ID)
 {
 	if (nodes.contains(ID))
@@ -90,11 +109,11 @@ QList<int> Graph::CalculatePath(int start, int finish) const
 			break;
 		}
 
-		if (distances[smallest] = std::numeric_limits<int>::max())
+		if (distances[smallest] == std::numeric_limits<int>::max())
 			break;
 
 		for (VertexIterator neighbor = vertices[smallest].begin(); 
-			 neighbor != vertices[smallest].end; 
+			 neighbor != vertices[smallest].end(); 
 			 neighbor++)
 		{
 			int alt = distances[smallest] + neighbor.value();

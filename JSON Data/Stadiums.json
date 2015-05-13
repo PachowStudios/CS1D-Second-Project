@@ -1,57 +1,1371 @@
 {
-	"Stadiums":
-	[
+    "Stadiums":
+    [
+            {
+                    "Name": "Angels Stadium of Anaheim",
+                    "Team": "Los Angeles Angels of Anaheim",
+                    "League": "American",
+                    "Grass": true,
+                    "Capacity": 45483,
+                    "PhoneNumber": "(714) 940-2000",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day":   19,
+                            "Year":  1996
+                    },
+                    "Address":
+                    {
+                            "Street": "2000 E Gene Autry Way",
+                            "City": "Anaheim",
+                            "State": "CA",
+                            "ZipCode": "92806"
+                    },
+                    "ID": 1
+                        
+            },
+            {
+                    "Name": "Comerica Park",
+                    "Team": "Detroit Tigers",
+                    "League": "American",
+                    "Grass": true,
+                    "Capacity": 41681,
+                    "PhoneNumber": "(313) 962-4000",
+                    "DateOpened": 
+                    {
+                            "Month": 4,
+                            "Day": 11,
+                            "Year": 2000
+                    },
+                    "Address":
+                    {
+                            "Street": "2100 Woodward Ave",
+                            "City": "Detroit",
+                            "State": "MI",
+                            "ZipCode": "48201"
+                    },
+                    "ID": 2
+            },
+            {
+                    "Name": "Fenway Park",
+                    "Team": "Boston Red Sox",
+                    "League": "American",
+                    "Grass": true,
+                    "Capacity": 37499,
+                    "PhoneNumber": "(877) 733-7699",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 20,
+                            "Year": 1912
+                    },
+                    "Address":
+                    {
+                            "Street": "4 Yawkey Way",
+                            "City": "Boston",
+                            "State": "MA",
+                            "ZipCode": "02215"
+                    },
+                    "ID": 3
+            },
+            {
+                    "Name": "Globe Life Park in Arlington",
+                    "Team": "Texas Rangers",
+                    "League": "American",
+                    "Grass": true,
+                    "Capacity": 48114,
+                    "PhoneNumber": "(817) 273-5222",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 1,
+                            "Year": 1994
+                    },
+                    "Address":
+                    {
+                            "Street": "1000 Ballparl Way",
+                            "City": "Arlington",
+                            "State": "TX",
+                            "ZipCode": "76011"
+                    },
+                    "ID": 4
+            },
+            {
+                    "Name": "Kauffman Stadium",
+                    "Team": "Kansas City Royals",
+                    "League": "American",
+                    "Grass": true,
+                    "Capacity": 37903,
+                    "PhoneNumber": "(816) 921-8000",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 10,
+                            "Year": 1973
+                    },
+                    "Address":
+                    {
+                            "Street": "1 Royal Way",
+                            "City": "Kansas City",
+                            "State": "MO",
+                            "ZipCode": "64129"
+                    },
+                    "ID": 5
+            },
+            {
+                    "Name": "Minute Maid Park",
+                    "Team": "Houston Astros",
+                    "League": "American",
+                    "Grass": true,
+                    "Capacity": 42060,
+                    "PhoneNumber": "(713) 259-8000",
+                    "DateOpened":
+                    {
+                            "Month": 3,
+                            "Day": 30,
+                            "Year": 2000
+                    },
+                    "Address":
+                    {
+                            "Street": "501 Crawford St.",
+                            "City": "Houston",
+                            "State": "TX",
+                            "ZipCode": "77002"
+                    },
+                    "ID": 6
+            },
+            {
+                    "Name": "O.co Coliseum",
+                    "Team": "Oakland Athletics",
+                    "League": "American",
+                    "Grass": true,
+                    "Capacity": 37090,
+                    "PhoneNumber": "(510) 569-2121",
+                    "DateOpened":
+                    {
+                            "Month": 9,
+                            "Day": 18,
+                            "Year": 1966
+                    },
+                    "Address":
+                    {
+                            "Street": "7000 Coliseum Way",
+                            "City": "Oakland",
+                            "State": "CA",
+                            "ZipCode": "94621"
+                    },
+                    "ID": 7
+            },
+            {
+                    "Name": "Oriole Park at Camden Yard",
+                    "Team": "Baltimore Orioles",
+                    "League": "American",
+                    "Grass": true,
+                    "Capacity": 48187,
+                    "PhoneNumber": "(410) 685-9800",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 6,
+                            "Year": 1992
+                    },
+                    "Address":
+                    {
+                            "Street": "333 West Camden St.",
+                            "City": "Baltimore",
+                            "State": "MD",
+                            "ZipCode": "21201"
+                    },
+                    "ID": 8
+            },
+            {
+                    "Name": "Progressive Field",
+                    "Team": "Cleveland Indians",
+                    "League": "American",
+                    "Grass": true,
+                    "Capacity": 42404,
+                    "PhoneNumber": "(216) 420-4487",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 2,
+                            "Year": 1994
+                    },
+                    "Address":
+                    {
+                            "Street": "2401 Ontario St.",
+                            "City": "Cleveland",
+                            "State": "OH",
+                            "ZipCode": "44115"
+                    },
+                    "ID": 9
+            },
+            {
+                    "Name": "Rogers Centre",
+                    "Team": "Toronto Blue Jays",
+                    "League": "American",
+                    "Grass": false,
+                    "Capacity": 49282,
+                    "PhoneNumber": "(416) 341-1000",
+                    "DateOpened":
+                    {
+                            "Month": 6,
+                            "Day": 3,
+                            "Year": 1989
+                    },
+                    "Address":
+                    {
+                            "Street": "1 Blue Jays Way",
+                            "City": "Toronto",
+                            "State": "Ontario",
+                            "ZipCode": "M5V1J3"
+                    },
+                    "ID": 10
+            },
+            {
+                    "Name": "SafeCo Field",
+                    "Team": "Seattle Mariners",
+                    "League": "American",
+                    "Grass": true,
+                    "Capacity": 47476,
+                    "PhoneNumber": "(206) 346-4000",
+                    "DateOpened":
+                    {
+                            "Month": 6,
+                            "Day": 15,
+                            "Year": 1999
+                    },
+                    "Address":
+                    {
+                            "Street": "1516 First Avenue South",
+                            "City": "Seattle",
+                            "State": "WA",
+                            "ZipCode": "98134"
+                    },
+                    "ID": 11
+            },
+            {
+                    "Name": "Target Field",
+                    "Team": "Minnesota Twins",
+                    "League": "American",
+                    "Grass": true,
+                    "Capacity": 39021,
+                    "PhoneNumber": "(800) 338-9467",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 12,
+                            "Year": 2010
+                    },
+                    "Address":
+                    {
+                            "Street": "353 N 5th St.",
+                            "City": "Minneapolis",
+                            "State": "MN",
+                            "ZipCode": "55403"
+                    },
+                    "ID": 12
+            },
+            {
+                    "Name": "Tropicana Field",
+                    "Team": "Tampa Bay Rays",
+                    "League": "American",
+                    "Grass": false,
+                    "Capacity": 31042,
+                    "PhoneNumber": "(727) 825-3137",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 3,
+                            "Year": 1990
+                    },
+                    "Address":
+                    {
+                            "Street": "1 Tropicana Dr.",
+                            "City": "St. Petersburg",
+                            "State": "FL",
+                            "ZipCode": "33705"
+                    },
+                    "ID": 13
+            },
+            {
+                    "Name": "US Cellular Field",
+                    "Team": "Chicago White Sox",
+                    "League": "American",
+                    "Grass": true,
+                    "Capacity": 40615,
+                    "PhoneNumber": "(312) 674-1000",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 18,
+                            "Year": 1991
+                    },
+                    "Address":
+                    {
+                            "Street": "333 West 35th St.",
+                            "City": "Chicago",
+                            "State": "IL",
+                            "ZipCode": "60616"
+                    },
+                    "ID": 14
+            },
+            {
+                    "Name": "Yankee Stadium",
+                    "Team": "New York Yankees",
+                    "League": "American",
+                    "Grass": true,
+                    "Capacity": 50291,
+                    "PhoneNumber": "(718) 293-4300",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 16,
+                            "Year": 2009
+                    },
+                    "Address":
+                    {
+                            "Street": "1 E 161st St.",
+                            "City": "South Bronx",
+                            "State": "NY",
+                            "ZipCode": "10451"
+                    },
+                    "ID": 15
+            },
+            {
+                    "Name": "AT&T Park",
+                    "Team": "San Francisco Giants",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 41915,
+                    "PhoneNumber": "(415) 972-2000",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 11,
+                            "Year": 2000
+                    },
+                    "Address":
+                    {
+                            "Street": "24 Willie Mays Plaza",
+                            "City": "San Francisco",
+                            "State": "CA",
+                            "ZipCode": "94107"
+                    },
+                    "ID": 16
+            },
+            {
+                    "Name": "Busch Stadium",
+                    "Team": "St. Louis Cardinals",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 46861,
+                    "PhoneNumber": "(314) 345-9600",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 10,
+                            "Year": 2006
+                    },
+                    "Address":
+                    {
+                            "Street": "700 Clark Street",
+                            "City": "St. Louis",
+                            "State": "MO",
+                            "ZipCode": "63102"
+                    },
+                    "ID": 17
+            },
+            {
+                    "Name": "Chase Field",
+                    "Team": "Arizona Diamondbacks",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 48633,
+                    "PhoneNumber": "(602) 462-6500",
+                    "DateOpened":
+                    {
+                            "Month": 3,
+                            "Day": 31,
+                            "Year": 1998
+                    },
+                    "Address":
+                    {
+                            "Street": "401 E Jefferson St.",
+                            "City": "Phoenix",
+                            "State": "AZ",
+                            "ZipCode": "85004"
+                    },
+                    "ID": 18
+            },
+            {
+                    "Name": "Citi Field",
+                    "Team": "New York Mets",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 41922,
+                    "PhoneNumber": "(718) 507-6387",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 13,
+                            "Year": 2009
+                    },
+                    "Address":
+                    {
+                            "Street": "126th St. & Roosevelt Ave.",
+                            "City": "Queens",
+                            "State": "NY",
+                            "ZipCode": "11368"
+                    },
+                    "ID": 19
+            },
+            {
+                    "Name": "Citizens Bank Park",
+                    "Team": "Philidelphia Phillies",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 43651,
+                    "PhoneNumber": "(215) 463-1000",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 3,
+                            "Year": 2004
+                    },
+                    "Address":
+                    {
+                            "Street": "1 Citizens Bank Way",
+                            "City": "Philadelphia",
+                            "State": "PA",
+                            "ZipCode": "19148"
+                    },
+                    "ID": 20
+            },
+            {
+                    "Name": "Coors Field",
+                    "Team": "Colorado Rockies",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 50480,
+                    "PhoneNumber": "(303) 292-0200",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 26,
+                            "Year": 1995
+                    },
+                    "Address":
+                    {
+                            "Street": "2001 Blake St.",
+                            "City": "Denver",
+                            "State": "CO",
+                            "ZipCode": "80205"
+                    },
+                    "ID": 21
+            },
+            {
+                    "Name": "Dodger Stadium",
+                    "Team": "Los Angeles Dodges",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 56000,
+                    "PhoneNumber": "(323) 224-1507",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 10,
+                            "Year": 1962
+                    },
+                    "Address":
+                    {
+                            "Street": "1000 Elysian Park Avenue",
+                            "City": "Los Angeles",
+                            "State": "CA",
+                            "ZipCode": "90090"
+                    },
+                    "ID": 22
+            },
+            {
+                    "Name": "Great America Ball Park",
+                    "Team": "Cincinnati Reds",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 42319,
+                    "PhoneNumber": "(513) 381-7337",
+                    "DateOpened":
+                    {
+                            "Month": 3,
+                            "Day": 31,
+                            "Year": 2003
+                    },
+                    "Address":
+                    {
+                            "Street": "100 Joe Nuxhall Way",
+                            "City": "Cincinnati",
+                            "State": "OH",
+                            "ZipCode": "45202"
+                    },
+                    "ID": 23
+            },
+            {
+                    "Name": "Marlins Park",
+                    "Team": "Miami Marlins",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 37442,
+                    "PhoneNumber": "(305) 480-1300",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 4,
+                            "Year": 2012
+                    },
+                    "Address":
+                    {
+                            "Street": "501 Marlins Way",
+                            "City": "Miami",
+                            "State": "FL",
+                            "ZipCode": "33125"
+                    },
+                    "ID": 24
+            },
+            {
+                    "Name": "Miller Park",
+                    "Team": "Milwaukee Brewers",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 41900,
+                    "PhoneNumber": "(414) 902-4400",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 6,
+                            "Year": 2001
+                    },
+                    "Address":
+                    {
+                            "Street": "1 Brewers Way",
+                            "City": "Milwaukee",
+                            "State": "WI",
+                            "ZipCode": "53214"
+                    },
+                    "ID": 25
+            },
+            {
+                    "Name": "Nationals Park",
+                    "Team": "Washington Nationals",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 41418,
+                    "PhoneNumber": "(202) 675-6287",
+                    "DateOpened":
+                    {
+                            "Month": 3,
+                            "Day": 30,
+                            "Year": 2008
+                    },
+                    "Address":
+                    {
+                            "Street": "1500 S Capitol St. SE",
+                            "City": "Washington",
+                            "State": "DC",
+                            "ZipCode": "20003"
+                    },
+                    "ID": 26
+            },
+            {
+                    "Name": "Petco Park",
+                    "Team": "San Diego Padres",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 42524,
+                    "PhoneNumber": "(619) 795-5000",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 8,
+                            "Year": 2004
+                    },
+                    "Address":
+                    {
+                            "Street": "19 Tony Gwynn Drive",
+                            "City": "San Diego",
+                            "State": "CA",
+                            "ZipCode": "92101"
+                    },
+                    "ID": 27
+            },
+            {
+                    "Name": "PNC Park",
+                    "Team": "Pittsburgh Pirates",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 38362,
+                    "PhoneNumber": "(412) 321-2827",
+                    "DateOpened":
+                    {
+                            "Month": 3,
+                            "Day": 31,
+                            "Year": 2001
+                    },
+                    "Address":
+                    {
+                            "Street": "115 Federal St.",
+                            "City": "Pittsburgh",
+                            "State": "PA",
+                            "ZipCode": "15212"
+                    },
+                    "ID": 28
+            },
+            {
+                    "Name": "Turner Field",
+                    "Team": "Atlanta Braves",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 49586,
+                    "PhoneNumber": "(404) 522-7630",
+                    "DateOpened":
+                    {
+                            "Month": 3,
+                            "Day": 29,
+                            "Year": 1997
+                    },
+                    "Address":
+                    {
+                            "Street": "755 Hank Aaron Drive",
+                            "City": "Atlanta",
+                            "State": "GA",
+                            "ZipCode": "30315"
+                    },
+                    "ID": 29
+            },
+            {
+                    "Name": "Wrigley Field",
+                    "Team": "Chicago Cubs",
+                    "League": "National",
+                    "Grass": true,
+                    "Capacity": 42374,
+                    "PhoneNumber": "(773) 404-2827",
+                    "DateOpened":
+                    {
+                            "Month": 4,
+                            "Day": 23,
+                            "Year": 1914
+                    },
+                    "Address":
+                    {
+                            "Street": "1060 West Addison Street",
+                            "City": "Chicago",
+                            "State": "IL",
+                            "ZipCode": "60613"
+                    },
+                    "ID": 30
+            }
+                
+    ],
+    "Graph":
+    [
+        {
+        	"A": 1,
+        	"B": 22,
+        	"Weight": 0 
+        },
+        {
+        	"A": 1,
+        	"B": 27,
+        	"Weight": 110
+        },
+        {
+        	"A": 1,
+        	"B": 12,
+        	"Weight": 1500 
+        },
+        {
+        	"A": 1,
+        	"B": 16,
+        	"Weight": 340 
+        },
+        {
+        	"A": 2,
+        	"B": 9,
+        	"Weight": 115
+        },
+        {
+        	"A": 2,
+        	"B": 30,
+        	"Weight": 240
+        },
+        {
+        	"A": 2,
+        	"B": 10,
+        	"Weight": 210
+        },
+        {
+        	"A": 3,
+        	"B": 10,
+        	"Weight": 430
+        },
+        {
+        	"A": 3,
+        	"B": 15,
+        	"Weight": 195
+        },
+        {
+        	"A": 3,
+        	"B": 24,
+        	"Weight": 1255
+        },
+        {
+        	"A": 3,
+        	"B": 19,
+        	"Weight": 195
+        },
+        {
+        	"A": 1,
+        	"B": 7,
+        	"Weight": 340
+        },
+        {
+        	"A": 4,
+        	"B": 18,
+        	"Weight": 870
+        },
+        {
+        	"A": 4,
+        	"B": 21,
+        	"Weight": 650
+        },
+        {
+        	"A": 4,
+        	"B": 6,
+        	"Weight": 230
+        },
+        {
+        	"A": 4,
+        	"B": 5,
+        	"Weight": 460
+        },
+        {
+        	"A": 4,
+        	"B": 29,
+        	"Weight": 740
+        },
+        {
+        	"A": 5,
+        	"B": 4,
+        	"Weight": 460
+        },
+        {
+        	"A": 5,
+        	"B": 21,
+        	"Weight": 560
+        },
+        {
+        	"A": 5,
+        	"B": 14,
+        	"Weight": 415
+        },
+        {
+        	"A": 5,
+        	"B": 30,
+        	"Weight": 415
+        },
+        {
+        	"A": 5,
+        	"B": 17,
+        	"Weight": 235
+        },
+        {
+        	"A": 6,
+        	"B": 18,
+        	"Weight": 1115
+        },
+        {
+        	"A": 6,
+        	"B": 4,
+        	"Weight": 230
+        },
+        {
+        	"A": 6,
+        	"B": 13,
+        	"Weight": 790
+        },
+        {
+        	"A": 6,
+        	"B": 17,
+        	"Weight": 680 
+        },
+        {
+        	"A": 6,
+        	"B": 24,
+        	"Weight": 965 
+        },
+        {
+        	"A": 7,
+        	"B": 11,
+        	"Weight": 680 
+        },
+        {
+        	"A": 7,
+        	"B": 18,
+        	"Weight": 650 
+        },
+        {
+        	"A": 7,
+        	"B": 22,
+        	"Weight": 340 
+        },
 		{
-			"ID": 0,
-			"Name": "Angels Stadium of Anaheim",
-			"Team": "Los Angeles Angels of Anaheim",
-			"League": "American",
-			"Grass": true,
-			"Capacity": 45483,
-			"PhoneNumber": "(714) 940-2000",
-			"DateOpened":
-			{
-				"Month": 4,
-				"Day": 19,
-				"Year": 1996
-			},
-			"Address":
-			{
-				"Street": "2000 E Gene Autry Way",
-				"City": "Anaheim",
-				"State": "CA",
-				"ZipCode": 92806
-			}
-		},
-		{
-			"ID": 1,
-			"Name": "Comerica Park",
-			"Team": "Detroit Tigers",
-			"League": "National",
-			"Grass": false,
-			"Capacity": 41681,
-			"PhoneNumber": "(313) 962-4000",
-			"DateOpened":
-			{
-				"Month": 4,
-				"Day": 11,
-				"Year": 2000
-			},
-			"Address":
-			{
-				"Street": "2100 Woodward Ave",
-				"City": "Detroit",
-				"State": "MI",
-				"ZipCode": 48201
-			}
-		}
-	],
-	"Graph":
-	[
-		{
-			"A": 0,
-			"B": 1,
-			"Weight": 50
-		}
-	]
+        	"A": 7,
+        	"B": 16,
+        	"Weight": 0
+        },
+        {
+        	"A": 8,
+        	"B": 20,
+        	"Weight": 90 
+        },
+        {
+        	"A": 8,
+        	"B": 28,
+        	"Weight": 195
+        },
+        {
+        	"A": 8,
+        	"B": 29,
+        	"Weight": 560
+        },
+        {
+        	"A": 8,
+        	"B": 24,
+        	"Weight": 930
+        },
+        {
+        	"A": 9,
+        	"B": 2,
+        	"Weight": 90
+        },
+        {
+        	"A": 9,
+        	"B": 23,
+        	"Weight": 225
+        },
+        {
+        	"A": 8,
+        	"B": 26,
+        	"Weight": 0
+        },
+        {
+        	"A": 10,
+        	"B": 3,
+        	"Weight": 430
+        },
+        {
+        	"A": 9,
+        	"B": 28,
+        	"Weight": 115
+        },
+        {
+        	"A": 10,
+        	"B": 28,
+        	"Weight": 225
+        },
+        {
+        	"A": 10,
+        	"B": 2,
+        	"Weight": 210
+        },
+        {
+        	"A": 10,
+        	"B": 25,
+        	"Weight": 430
+        },
+        {
+        	"A": 10,
+        	"B": 11,
+        	"Weight": 2070
+        },
+        {
+        	"A": 11,
+        	"B": 10,
+        	"Weight": 2070 
+        },
+        {
+        	"A": 11,
+        	"B": 12,
+        	"Weight": 1390
+        },
+        {
+        	"A": 11,
+        	"B": 16,
+        	"Weight": 680
+        },
+        {
+        	"A": 11,
+        	"B": 7,
+        	"Weight": 680
+        		
+        },
+        {
+        	"A": 12,
+        	"B": 11,
+        	"Weight": 1390
+        },
+        {
+        	"A": 12,
+        	"B": 1,
+        	"Weight": 1500 
+        },
+        {
+        	"A": 12,
+        	"B": 22,
+        	"Weight": 1500
+        },
+        {
+        	"A": 12,
+        	"B": 17,
+        	"Weight": 465
+        },
+        {
+        	"A": 12,
+        	"B": 25,
+        	"Weight": 300 
+        },
+        {
+        	"A": 13,
+        	"B": 24,
+        	"Weight": 210
+        },
+        {
+        	"A": 13,
+        	"B": 6,
+        	"Weight": 790
+        },
+        {
+        	"A": 13,
+        	"B": 23,
+        	"Weight": 790
+        },
+        {
+        	"A": 14,
+        	"B": 30,
+        	"Weight": 0
+        },
+        {
+        	"A": 14,
+        	"B": 23,
+        	"Weight": 250
+        },
+        {
+        	"A": 14,
+        	"B": 25,
+        	"Weight": 80
+        },
+        {
+        	"A": 14,
+        	"B": 2,
+        	"Weight": 240
+        },
+        {
+        	"A": 14,
+        	"B": 5,
+        	"Weight": 415
+        },
+        {
+        	"A": 15,
+        	"B": 19,
+        	"Weight": 0
+        },
+        {
+        	"A": 15,
+        	"B": 3,
+        	"Weight": 195 
+        },
+        {
+        	"A": 15,
+        	"B": 28,
+        	"Weight": 315
+        },
+        {
+        	"A": 15,
+        	"B": 20,
+        	"Weight": 80
+        },
+        {
+        	"A": 16,
+        	"B": 7,
+        	"Weight": 0
+        },
+        {
+        	"A": 16,
+        	"B": 11,
+        	"Weight": 680
+        },
+        {
+        	"A": 16,
+        	"B": 18,
+        	"Weight": 650
+        },
+        {
+        	"A": 16,
+        	"B": 22,
+        	"Weight": 340
+        },
+        {
+        	"A": 16,
+        	"B": 1,
+        	"Weight": 340
+        },
+        {
+        	"A": 17,
+        	"B": 12,
+        	"Weight": 465
+        },
+        {
+        	"A": 17,
+        	"B": 5,
+        	"Weight": 235
+        },
+        {
+        	"A": 17,
+        	"B": 6,
+        	"Weight": 680
+        },
+        {
+        	"A": 17,
+        	"B": 23,
+        	"Weight": 310
+        },
+        {
+        	"A": 18,
+        	"B": 27,
+        	"Weight": 300
+        },
+        {
+        	"A": 18,
+        	"B": 7,
+        	"Weight": 650
+        },
+        {
+        	"A": 18,
+        	"B": 16,
+        	"Weight": 650
+        },
+        {
+        	"A": 18,
+        	"B": 21,
+        	"Weight": 580
+        },
+        {
+        	"A": 18,
+        	"B": 4,
+        	"Weight": 870
+        },
+        {
+        	"A": 18,
+        	"B": 6,
+        	"Weight": 1115
+        },
+        {
+        	"A": 19,
+        	"B": 15,
+        	"Weight": 0
+        },
+        {
+        	"A": 19,
+        	"B": 3,
+        	"Weight": 195
+        },
+        {
+        	"A": 19,
+        	"B": 28,
+        	"Weight": 315
+        },
+        {
+        	"A": 19,
+        	"B": 20,
+        	"Weight": 80
+        },
+        {
+        	"A": 20,
+        	"B": 15,
+        	"Weight": 80
+        },
+        {
+        	"A": 20,
+        	"B": 19,
+        	"Weight": 80
+        },
+        {
+        	"A": 20,
+        	"B": 8,
+        	"Weight": 90
+        },
+        {
+        	"A": 20,
+        	"B": 26,
+        	"Weight": 90
+        },
+        {
+        	"A": 21,
+        	"B": 27,
+        	"Weight": 830 
+        },
+        {
+        	"A": 21,
+        	"B": 18,
+        	"Weight": 580
+        },
+        {
+        	"A": 21,
+        	"B": 5,
+        	"Weight": 560
+        },
+        {
+        	"A": 21,
+        	"B": 4,
+        	"Weight": 650
+        },
+        {
+        	"A": 22,
+        	"B": 1,
+        	"Weight": 0
+        },
+        {
+        	"A": 22,
+        	"B": 7,
+        	"Weight": 340
+        },
+        {
+        	"A": 22,
+        	"B": 16,
+        	"Weight": 340
+        },
+        {
+        	"A": 22,
+        	"B": 27,
+        	"Weight": 110
+        },
+        {
+        	"A": 22,
+        	"B": 12,
+        	"Weight": 1500
+        },
+        {
+        	"A": 23,
+        	"B": 28,
+        	"Weight": 260
+        },
+        {
+        	"A": 23,
+        	"B": 9,
+        	"Weight": 225
+        },
+        {
+        	"A": 23,
+        	"B": 14,
+        	"Weight": 250
+        },
+        {
+        	"A": 23,
+        	"B": 30,
+        	"Weight": 250
+        },
+        {
+        	"A": 23,
+        	"B": 17,
+        	"Weight": 310
+        },
+        {
+        	"A": 23,
+        	"B": 29,
+        	"Weight": 375
+        },
+        {
+        	"A": 23,
+        	"B": 13,
+        	"Weight": 790
+        },
+        {
+        	"A": 24,
+        	"B": 3,
+        	"Weight": 1255
+        },
+        {
+        	"A": 24,
+        	"B": 26,
+        	"Weight": 930
+        },
+        {
+        	"A": 24,
+        	"B": 8,
+        	"Weight": 930
+        },
+        {
+        	"A": 24,
+        	"B": 29,
+        	"Weight": 600
+        },
+        {
+        	"A": 24,
+        	"B": 13,
+        	"Weight": 210
+        },
+        {
+        	"A": 24,
+        	"B": 6,
+        	"Weight": 965
+        },
+        {
+        	"A": 25,
+        	"B": 10,
+        	"Weight": 430
+        },
+        {
+        	"A": 25,
+        	"B": 12,
+        	"Weight": 300
+        },
+        {
+        	"A": 25,
+        	"B": 30,
+        	"Weight": 80
+        },
+        {
+        	"A": 25,
+        	"B": 14,
+        	"Weight": 80
+        },
+        {
+        	"A": 26,
+        	"B": 8,
+        	"Weight": 0
+        },
+        {
+        	"A": 26,
+        	"B": 20,
+        	"Weight": 90
+        },
+        {
+        	"A": 26,
+        	"B": 28,
+        	"Weight": 195
+        },
+        {
+        	"A": 26,
+        	"B": 29,
+        	"Weight": 560
+        },
+        {
+        	"A": 26,
+        	"B": 24,
+        	"Weight": 930
+        },
+        {
+        	"A": 27,
+        	"B": 1,
+        	"Weight": 110
+        },
+        {
+        	"A": 27,
+        	"B": 22,
+        	"Weight": 110
+        },
+        {
+        	"A": 27,
+        	"B": 18,
+        	"Weight": 300
+        },
+        {
+        	"A": 27,
+        	"B": 21,
+        	"Weight": 830
+        },
+        {
+        	"A": 28,
+        	"B": 23,
+        	"Weight": 260
+        },
+        {
+        	"A": 28,
+        	"B": 9,
+        	"Weight": 115
+        },
+        {
+        	"A": 28,
+        	"B": 10,
+        	"Weight": 225
+        },
+        {
+        	"A": 28,
+        	"B": 15,
+        	"Weight": 315
+        },
+        {
+        	"A": 28,
+        	"B": 19,
+        	"Weight": 315
+        },
+        {
+        	"A": 28,
+        	"B": 8,
+        	"Weight": 195
+        },
+        {
+        	"A": 28,
+        	"B": 26,
+        	"Weight": 195
+        },
+        {
+        	"A": 29,
+        	"B": 23,
+        	"Weight": 375
+        },
+        {
+        	"A": 29,
+        	"B": 26,
+        	"Weight": 560
+        },
+        {
+        	"A": 29,
+        	"B": 24,
+        	"Weight": 600
+        },
+        {
+        	"A": 29,
+        	"B": 4,
+        	"Weight": 740
+        },
+        {
+        	"A": 29,
+        	"B": 8,
+        	"Weight": 560
+        },
+        {
+        	"A": 30,
+        	"B": 14,
+        	"Weight": 0
+        },
+        {
+        	"A": 30,
+        	"B": 25,
+        	"Weight": 80
+        },
+        {
+        	"A": 30,
+        	"B": 2,
+        	"Weight": 240
+        },
+        {
+        	"A": 30,
+        	"B": 23,
+        	"Weight": 250
+        },
+        {
+        	"A": 30,
+        	"B": 5,
+        	"Weight": 415
+        }
+    ]
 }
