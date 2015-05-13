@@ -102,7 +102,7 @@ QList<int> Graph::CalculatePath(int start, int finish) const
 		{
 			while (previous.find(smallest) != previous.end())
 			{
-				path.push_back(smallest);
+				path.push_front(smallest);
 				smallest = previous[smallest];
 			}
 
@@ -113,7 +113,7 @@ QList<int> Graph::CalculatePath(int start, int finish) const
 			break;
 
 		for (VertexIterator neighbor = vertices[smallest].begin(); 
-			 neighbor != vertices[smallest].end(); 
+			 neighbor != vertices[smallest].end();
 			 neighbor++)
 		{
 			int alt = distances[smallest] + neighbor.value();
@@ -128,4 +128,22 @@ QList<int> Graph::CalculatePath(int start, int finish) const
 	}
 
 	return path;
+}
+
+int Graph::CalculateDistance(int start, int finish) const
+{
+	QList<int> path = CalculatePath(start, finish);
+	int distance = 0;
+
+	if (path.count() == 0)
+		return -1;
+
+	path.push_front(start);
+
+	for (int i = 1; i < path.count(); i++)
+	{
+		distance += vertices[path[i - 1]][path[i]];
+	}
+
+	return distance;
 }

@@ -8,9 +8,6 @@
 #include <QMainWindow>
 #include <QMessageBox>
 
-#include <QDebug>
-#include <QList>
-
 class StadiumTripPlanner : public QMainWindow
 {
 	Q_OBJECT
