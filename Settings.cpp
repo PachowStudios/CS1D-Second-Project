@@ -53,6 +53,26 @@ Stadium& Settings::GetStadium(SearchBy searchBy, QString searchTerm)
 	                });
 }
 
+bool Settings::HasSouvenir(QString name) const
+{
+	using std::any_of;
+
+	return any_of(souvenirs.begin(),
+				  souvenirs.end(),
+				  [name](const Souvenir &s)
+				  { return s.name == name; });
+}
+
+Souvenir& Settings::GetSouvenir(QString name)
+{
+	using std::find_if;
+
+	return *find_if(souvenirs.begin(),
+					souvenirs.end(),
+					[name](const Souvenir &s)
+	                { return s.name == name; });
+}
+
 bool Settings::LoadCredentials()
 {
 	if (qSettings.contains(UsernamePath) &&
@@ -95,12 +115,15 @@ bool Settings::LoadStadiums(QString fileName)
 
 	QJsonArray stadiumJsonArray;
 	QJsonArray graphJsonArray;
+	QJsonArray souvenirJsonArray;
 	
 	if (jsonDocObject["Stadiums"].isArray() &&
-		jsonDocObject["Graph"].isArray())
+		jsonDocObject["Graph"].isArray()    &&
+		jsonDocObject["Souvenirs"].isArray())
 	{
-		stadiumJsonArray = jsonDocObject["Stadiums"].toArray();
-		graphJsonArray = jsonDocObject["Graph"].toArray();
+		stadiumJsonArray  = jsonDocObject["Stadiums"].toArray();
+		graphJsonArray    = jsonDocObject["Graph"].toArray();
+		souvenirJsonArray = jsonDocObject["Souvenirs"].toArray();
 	}
 	else
 		return false;
@@ -108,26 +131,30 @@ bool Settings::LoadStadiums(QString fileName)
 	for (auto &arrayItem : stadiumJsonArray)
 	{
 		QJsonObject stadiumJson = arrayItem.toObject();
+		Stadium stadiumObject;
 
-		if (stadiumJson.contains("Name"))
+		if (stadiumObject.LoadFromJson(stadiumJson) && !HasStadium(SearchBy::Name, stadiumObject.name))
 		{
-			QString stadiumName = stadiumJson["Name"].toString();
-			
-			if (!HasStadium(SearchBy::Name, stadiumName))
-			{
-				Stadium stadiumObject;
-
-				if (stadiumObject.LoadFromJson(stadiumJson))
-				{
-					stadiums.append(stadiumObject);
-					stadiumGraph.AddNode(stadiumObject.ID);
-				}
-			}
+			stadiums.append(stadiumObject);
+			stadiumGraph.AddNode(stadiumObject.ID);
 		}
+		else
+			return false;
 	}
 
 	if (!stadiumGraph.LoadFromJson(graphJsonArray))
 		return false;
+
+	for (auto &arrayItem : souvenirJsonArray)
+	{
+		QJsonObject souvenirJson = arrayItem.toObject();
+		Souvenir souvenirObject;
+
+		if (souvenirObject.LoadFromJson(souvenirJson) && !HasSouvenir(souvenirObject.name))
+			souvenirs.append(souvenirObject);
+		else
+			return false;
+	}
 
 	return true;
 }
@@ -140,15 +167,18 @@ bool Settings::SaveStadiums()
 		return false;
 
 	QJsonObject jsonDoc;
-	QJsonArray stadiumJsonArray;
-	QJsonArray graphJsonArray;
+	QJsonArray  stadiumJsonArray;
+	QJsonArray  graphJsonArray;
+	QJsonArray  souvenirJsonArray;
 
 	for (auto &stadium : stadiums)
 		stadiumJsonArray.append(stadium.SaveToJson());
 
+	for (auto &souvenir : souvenirs)
+		souvenirJsonArray.append(souvenir.SaveToJson());
 
-
-	jsonDoc["Stadiums"] = stadiumJsonArray;
+	jsonDoc["Stadiums"]  = stadiumJsonArray;
+	jsonDoc["Souvenirs"] = souvenirJsonArray;
 
 	saveFile.write(QJsonDocument(jsonDoc).toJson());
 

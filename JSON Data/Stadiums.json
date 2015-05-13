@@ -1367,5 +1367,24 @@
         	"B": 5,
         	"Weight": 415
         }
-    ]
+    ],
+	"Souvenirs"
+	[
+		{
+			"Name": "Baseball Cap",
+			"Price": 25.99
+		},
+		{
+			"Name": "Baseball Bat",
+			"Price": 35.35
+		},
+		{
+			"Name": "Team Pennant",
+			"Price": 12.99
+		},
+		{
+			"Name": "Autographed Baseball",
+			"Price": 19.99
+		}
+	]
 }

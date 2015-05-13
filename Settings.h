@@ -2,6 +2,7 @@
 #define SETTINGS_H
 
 #include "Stadium.h"
+#include "Souvenir.h"
 #include "Credential.h"
 #include "Graph.h"
 
@@ -25,8 +26,10 @@ public:
 
 	Settings();
 
-	bool     HasStadium(SearchBy searcyBy, QString searchTerm) const;
-	Stadium& GetStadium(SearchBy searchBy, QString searchTerm);
+	bool      HasStadium(SearchBy searcyBy, QString searchTerm) const;
+	Stadium&  GetStadium(SearchBy searchBy, QString searchTerm);
+	bool      HasSouvenir(QString name) const;
+	Souvenir& GetSouvenir(QString name);
 
 	bool LoadCredentials();
 	bool SaveCredentials();
@@ -34,9 +37,10 @@ public:
 	bool LoadStadiums(QString fileName = nullptr);
 	bool SaveStadiums();
 
-	Credential  adminLogin;
-	StadiumList stadiums;
-	Graph stadiumGraph;
+	Credential   adminLogin;
+	StadiumList  stadiums;
+	Graph        stadiumGraph;
+	SouvenirList souvenirs;
 
 private:
 	const QString CompanyName = "ScrumShot";
