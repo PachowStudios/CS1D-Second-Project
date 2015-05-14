@@ -1,7 +1,7 @@
 #include "CurrentTrip.h"
 
-CurrentTrip::CurrentTrip(QWidget *parent)
-	: QDialog(parent)
+CurrentTrip::CurrentTrip(StadiumList trip, QWidget *parent)
+	: trip(trip), QDialog(parent)
 {
 	ui.setupUi(this);
 }

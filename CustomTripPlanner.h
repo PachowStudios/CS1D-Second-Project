@@ -6,6 +6,7 @@
 #include "Settings.h"
 
 #include <QDialog>
+#include <QMessageBox>
 
 class CustomTripPlanner : public QDialog
 {

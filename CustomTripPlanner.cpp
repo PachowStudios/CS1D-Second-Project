@@ -69,5 +69,12 @@ void CustomTripPlanner::MoveDown()
 
 void CustomTripPlanner::StartTrip()
 {
-	
+	if (chosenStadiums.count() < 2)
+	{
+		(new QMessageBox(QMessageBox::Critical,
+			             "", "You must select at least 2 stadiums to visit!"))->exec();
+		return;
+	}
+
+
 }

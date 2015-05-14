@@ -32,4 +32,6 @@ private:
 	typedef QHash<int, int>::const_iterator VertexIterator;
 };
 
+typedef QList<int> Path;
+
 #endif

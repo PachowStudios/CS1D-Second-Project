@@ -64,7 +64,7 @@ bool Graph::RemoveConnection(int a, int b)
 	return true;
 }
 
-QList<int> Graph::CalculatePath(int start, int finish) const
+Path Graph::CalculatePath(int start, int finish) const
 {
 	if (!nodes.contains(start) || !nodes.contains(finish))
 		return QList<int>();
@@ -72,7 +72,7 @@ QList<int> Graph::CalculatePath(int start, int finish) const
 	QHash<int, int> distances;
 	QHash<int, int> previous;
 	QList<int> tempNodes;
-	QList<int> path;
+	Path path;
 
 	auto comparator = [&](int left, int right)
 	{
