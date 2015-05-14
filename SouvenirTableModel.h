@@ -14,6 +14,7 @@ public:
 	SouvenirTableModel(QObject *parent = 0);
 
 	void ShowSouvenirs(SouvenirList &souvenirs);
+	void AddSouvenir(Souvenir &souvenir);
 
 	int           rowCount(const QModelIndex &parent = QModelIndex()) const;
 	int           columnCount(const QModelIndex &parent = QModelIndex()) const;

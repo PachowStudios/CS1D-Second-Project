@@ -11,6 +11,13 @@ void SouvenirTableModel::ShowSouvenirs(SouvenirList &souvenirs)
 	layoutChanged();
 }
 
+void SouvenirTableModel::AddSouvenir(Souvenir &souvenir)
+{
+	beginInsertRows(QModelIndex(), 0, 0);
+	souvenirs->append(souvenir);
+	endInsertRows();
+}
+
 int SouvenirTableModel::rowCount(const QModelIndex &parent) const
 {
 	if (!souvenirs)

@@ -33,7 +33,7 @@ void StadiumTripPlanner::ViewStadiums() const
 
 void StadiumTripPlanner::PlanTrip() const
 {
-	(new TripPlanner)->exec();
+	(new CustomTripPlanner)->exec();
 }
 
 void StadiumTripPlanner::LoginLogout()

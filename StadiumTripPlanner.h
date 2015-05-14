@@ -3,7 +3,7 @@
 
 #include "ui_StadiumTripPlanner.h"
 #include "StadiumView.h"
-#include "TripPlanner.h"
+#include "CustomTripPlanner.h"
 #include "AdminLogin.h"
 #include "SouvenirEdit.h"
 

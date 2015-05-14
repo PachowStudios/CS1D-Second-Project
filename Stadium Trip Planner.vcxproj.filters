@@ -206,14 +206,23 @@
     <ClCompile Include="GeneratedFiles\Release\moc_SouvenirTableModel.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_TripPlanner.cpp">
+    <ClCompile Include="CurrentTrip.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CurrentTrip.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_TripPlanner.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_CustomTripPlanner.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CustomTripPlanner.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="TripPlanner.cpp">
+    <ClCompile Include="CustomTripPlanner.cpp">
       <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CurrentTrip.cpp">
+      <Filter>Generated Files\Release</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -280,10 +289,16 @@
     <CustomBuild Include="SouvenirTableModel.h">
       <Filter>Header Files\Models</Filter>
     </CustomBuild>
-    <CustomBuild Include="TripPlanner.ui">
+    <CustomBuild Include="CurrentTrip.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="TripPlanner.h">
+    <CustomBuild Include="CurrentTrip.h">
+      <Filter>Header Files\GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CustomTripPlanner.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CustomTripPlanner.h">
       <Filter>Header Files\GUI</Filter>
     </CustomBuild>
   </ItemGroup>
@@ -333,7 +348,10 @@
     <ClInclude Include="GeneratedFiles\ui_SouvenirEdit.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_TripPlanner.h">
+    <ClInclude Include="GeneratedFiles\ui_CurrentTrip.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_CustomTripPlanner.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>

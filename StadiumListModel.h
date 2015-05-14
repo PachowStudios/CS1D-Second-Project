@@ -15,6 +15,8 @@ public:
 	void ShowStadiums(StadiumList &stadiums);
 	void AddStadium(Stadium &stadium);
 	void RemoveStadium(int row);
+	void MoveUp(int row);
+	void MoveDown(int row);
 
 	int      rowCount(const QModelIndex &parent = QModelIndex()) const;
 	QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
