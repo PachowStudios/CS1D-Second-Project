@@ -5,8 +5,9 @@ Settings AppSettings;
 Settings::Settings()
 	: qSettings("ScrumShot", "StadiumTripPlanner")
 {
-	dataFile = QStandardPaths::writableLocation(QStandardPaths::StandardLocation::DataLocation)
-		     + DataFilePath;
+	dataFilePath = QStandardPaths::writableLocation(QStandardPaths::StandardLocation::DataLocation)
+	             + DataFileFolder;
+	dataFile = dataFilePath + DataFileName;
 }
 
 bool Settings::HasStadium(SearchBy searchBy, QString searchTerm) const
@@ -161,6 +162,11 @@ bool Settings::LoadStadiums(QString fileName)
 
 bool Settings::SaveStadiums()
 {
+	QDir saveDir(dataFilePath);
+
+	if (!saveDir.exists())
+		saveDir.mkpath(dataFilePath);
+
 	QFile saveFile(dataFile);
 
 	if (!saveFile.open(QIODevice::WriteOnly))

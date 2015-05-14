@@ -13,6 +13,7 @@
 #include <QSettings>
 #include <QStandardPaths>
 #include <QFile>
+#include <QDir>
 
 class Settings
 {
@@ -47,9 +48,11 @@ private:
 	const QString ProductName = "StadiumTripPlanner";
 	const QString UsernamePath = "Login/Username";
 	const QString PasswordPath = "Login/Password";
-	const QString DataFilePath = "/StadiumTripPlanner/StadiumData.json";
+	const QString DataFileFolder = "/StadiumTripPlanner/";
+	const QString DataFileName = "StadiumData.json";
 
 	QSettings qSettings;
+	QString   dataFilePath;
 	QString   dataFile;
 };
 

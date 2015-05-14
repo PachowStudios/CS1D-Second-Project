@@ -9,12 +9,13 @@ SouvenirEdit::SouvenirEdit(QWidget *parent)
 
 	souvenirTableModel = new SouvenirTableModel();
 	souvenirTableModel->ShowSouvenirs(AppSettings.souvenirs);
+
 	ui.souvenirTable->setModel(souvenirTableModel);
+	ui.souvenirTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeMode::Stretch);
+	ui.souvenirTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeMode::Fixed);
 
 	connect(ui.buttons, SIGNAL(accepted()),
 			this,       SLOT(Save()));
-
-	ui.souvenirTable->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeMode::Stretch);
 }
 
 void SouvenirEdit::Save()
