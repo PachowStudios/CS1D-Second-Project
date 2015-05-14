@@ -4,7 +4,6 @@ SouvenirEdit::SouvenirEdit(QWidget *parent)
 	: QDialog(parent)
 {
 	ui.setupUi(this);
-
 	setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
 
 	souvenirTableModel = new SouvenirTableModel();

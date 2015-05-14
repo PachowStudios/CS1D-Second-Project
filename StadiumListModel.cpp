@@ -11,6 +11,20 @@ void StadiumListModel::ShowStadiums(StadiumList &stadiums)
 	layoutChanged();
 }
 
+void StadiumListModel::AddStadium(Stadium &stadium)
+{
+	beginInsertRows(QModelIndex(), 0, 0);
+	stadiums->append(stadium);
+	endInsertRows();
+}
+
+void StadiumListModel::RemoveStadium(int row)
+{
+	beginRemoveRows(QModelIndex(), row, row);
+	stadiums->removeAt(row);
+	endRemoveRows();
+}
+
 int StadiumListModel::rowCount(const QModelIndex &parent) const
 {
 	if (!stadiums)

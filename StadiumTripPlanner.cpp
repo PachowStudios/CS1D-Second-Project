@@ -8,11 +8,13 @@ StadiumTripPlanner::StadiumTripPlanner(QWidget *parent)
 
 	connect(ui.viewStadiumsButton,     SIGNAL(clicked()),
 			this,                      SLOT(ViewStadiums()));
+	connect(ui.planTripButton,         SIGNAL(clicked()),
+			this,                      SLOT(PlanTrip()));
 	connect(ui.adminMenuLoginLogout,   SIGNAL(triggered()),
 			this,                      SLOT(LoginLogout()));
 	connect(ui.adminMenuEditSouvenirs, SIGNAL(triggered()),
 			this,                      SLOT(EditSouvenirs()));
-	connect(ui.dialogButtons,          SIGNAL(rejected()),
+	connect(ui.buttons,                SIGNAL(rejected()),
 			this,                      SLOT(close()));
 }
 
@@ -27,6 +29,11 @@ void StadiumTripPlanner::SetAdminOptionsEnabled(bool enabled)
 void StadiumTripPlanner::ViewStadiums() const
 {
 	(new StadiumView)->exec();
+}
+
+void StadiumTripPlanner::PlanTrip() const
+{
+	(new TripPlanner)->exec();
 }
 
 void StadiumTripPlanner::LoginLogout()

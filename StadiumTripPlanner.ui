@@ -20,7 +20,7 @@
    <string>Stadium Trip Planner</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QDialogButtonBox" name="dialogButtons">
+   <widget class="QDialogButtonBox" name="buttons">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -78,14 +78,27 @@
    <widget class="QPushButton" name="viewStadiumsButton">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>50</x>
       <y>60</y>
-      <width>111</width>
+      <width>121</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
      <string>View Stadiums</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="planTripButton">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>60</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Plan Trip</string>
     </property>
    </widget>
   </widget>

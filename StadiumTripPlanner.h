@@ -3,6 +3,7 @@
 
 #include "ui_StadiumTripPlanner.h"
 #include "StadiumView.h"
+#include "TripPlanner.h"
 #include "AdminLogin.h"
 #include "SouvenirEdit.h"
 
@@ -26,6 +27,7 @@ private:
 
 	private slots:
 	void ViewStadiums() const;
+	void PlanTrip() const;
 	void LoginLogout();
 	void EditSouvenirs() const;
 };

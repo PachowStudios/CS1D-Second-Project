@@ -13,15 +13,14 @@ public:
 	StadiumListModel(QObject *parent = 0);
 
 	void ShowStadiums(StadiumList &stadiums);
+	void AddStadium(Stadium &stadium);
+	void RemoveStadium(int row);
 
-	int           rowCount(const QModelIndex &parent = QModelIndex()) const;
-	QVariant      data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+	int      rowCount(const QModelIndex &parent = QModelIndex()) const;
+	QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
 private:
 	StadiumList *stadiums = nullptr;
-
-signals:
-	void dataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
 };
 
 #endif

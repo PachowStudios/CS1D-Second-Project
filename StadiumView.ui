@@ -13,8 +13,11 @@
   <property name="windowTitle">
    <string>View Stadiums</string>
   </property>
-  <property name="modal">
+  <property name="sizeGripEnabled">
    <bool>true</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>

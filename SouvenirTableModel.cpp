@@ -84,8 +84,10 @@ bool SouvenirTableModel::setData(const QModelIndex &index, const QVariant &value
 
 Qt::ItemFlags SouvenirTableModel::flags(const QModelIndex &index) const
 {
-	if (!index.isValid())
-		return Qt::ItemIsEnabled;
-
-	return Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsEditable;
+	if (index.isValid())
+		return Qt::ItemFlag::ItemIsEnabled 
+		     | Qt::ItemFlag::ItemIsSelectable 
+			 | Qt::ItemFlag::ItemIsEditable;
+	else
+		return Qt::ItemFlag::NoItemFlags;
 }

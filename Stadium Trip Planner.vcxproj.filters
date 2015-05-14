@@ -206,6 +206,15 @@
     <ClCompile Include="GeneratedFiles\Release\moc_SouvenirTableModel.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_TripPlanner.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_TripPlanner.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="TripPlanner.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="StadiumTripPlanner.ui">
@@ -271,6 +280,12 @@
     <CustomBuild Include="SouvenirTableModel.h">
       <Filter>Header Files\Models</Filter>
     </CustomBuild>
+    <CustomBuild Include="TripPlanner.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TripPlanner.h">
+      <Filter>Header Files\GUI</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stadium.h">
@@ -316,6 +331,9 @@
       <Filter>Header Files\Core</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_SouvenirEdit.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_TripPlanner.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>

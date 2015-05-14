@@ -4,7 +4,6 @@ StadiumView::StadiumView(QWidget *parent)
 	:QDialog(parent)
 {
 	ui.setupUi(this);
-
 	setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
 
 	stadiumTableModel = new StadiumTableModel();

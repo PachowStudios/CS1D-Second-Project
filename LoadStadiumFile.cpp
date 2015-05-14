@@ -4,7 +4,6 @@ LoadStadiumFile::LoadStadiumFile(QWidget *parent)
 	: QDialog(parent)
 {
 	ui.setupUi(this);
-
 	setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
 	setWindowFlags(windowFlags() | Qt::MSWindowsFixedSizeDialogHint);
 
