@@ -13,9 +13,22 @@ void SouvenirTableModel::ShowSouvenirs(SouvenirList &souvenirs)
 
 void SouvenirTableModel::AddSouvenir(Souvenir &souvenir)
 {
+	if (!souvenirs)
+		return;
+
 	beginInsertRows(QModelIndex(), 0, 0);
 	souvenirs->append(souvenir);
 	endInsertRows();
+}
+
+void SouvenirTableModel::RemoveSouvenir(int row)
+{
+	if (!souvenirs)
+		return;
+
+	beginRemoveRows(QModelIndex(), row, row);
+	souvenirs->removeAt(row);
+	endRemoveRows();
 }
 
 int SouvenirTableModel::rowCount(const QModelIndex &parent) const

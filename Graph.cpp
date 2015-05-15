@@ -19,6 +19,31 @@ bool Graph::LoadFromJson(const QJsonArray &json)
 	return true;
 }
 
+QJsonArray Graph::SaveToJson() const
+{
+	QJsonArray json;
+
+	for (GraphIterator vertex = vertices.begin();
+		 vertex != vertices.end();
+		 vertex++)
+	{
+		for (VertexIterator connection = vertex.value().begin();
+			 connection != vertex.value().end();
+			 connection++)
+		{
+			QJsonObject connectionJson;
+
+			connectionJson["A"]      = vertex.key();
+			connectionJson["B"]      = connection.key();
+			connectionJson["Weight"] = connection.value();
+
+			json.append(connectionJson);
+		}
+	}
+
+	return json;
+}
+
 bool Graph::AddNode(int ID)
 {
 	if (nodes.contains(ID))

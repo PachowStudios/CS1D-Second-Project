@@ -13,8 +13,8 @@ class Graph
 public:
 	Graph() = default;
 
-	bool LoadFromJson(const QJsonArray &json);
-
+	bool       LoadFromJson(const QJsonArray &json);
+	QJsonArray SaveToJson() const;
 
 	bool AddNode(int ID);
 	bool RemoveNode(int ID);

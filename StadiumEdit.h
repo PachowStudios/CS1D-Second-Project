@@ -20,6 +20,8 @@ private:
 	StadiumTableModel *stadiumTableModel = nullptr;
 
 	private slots:
+	void AddStadium();
+	void RemoveStadium();
 	void Save();
 };
 

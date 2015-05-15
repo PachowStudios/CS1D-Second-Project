@@ -29,7 +29,7 @@ QJsonObject Address::SaveToJson() const
 	json["Street"]  = street;
 	json["City"]    = city;
 	json["State"]   = state;
-	json["Zipcode"] = zipCode;
+	json["ZipCode"] = zipCode;
 
 	return json;
 }

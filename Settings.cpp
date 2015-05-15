@@ -125,16 +125,16 @@ bool Settings::LoadStadiums(QString fileName)
 		return false;
 
 	QJsonArray stadiumJsonArray;
-	QJsonArray graphJsonArray;
 	QJsonArray souvenirJsonArray;
+	QJsonArray graphJsonArray;
 	
-	if (jsonDocObject["Stadiums"].isArray() &&
-		jsonDocObject["Graph"].isArray()    &&
-		jsonDocObject["Souvenirs"].isArray())
+	if (jsonDocObject["Stadiums"].isArray()  &&
+		jsonDocObject["Souvenirs"].isArray() &&
+		jsonDocObject["Graph"].isArray())
 	{
 		stadiumJsonArray  = jsonDocObject["Stadiums"].toArray();
-		graphJsonArray    = jsonDocObject["Graph"].toArray();
 		souvenirJsonArray = jsonDocObject["Souvenirs"].toArray();
+		graphJsonArray    = jsonDocObject["Graph"].toArray();
 	}
 	else
 		return false;
@@ -153,9 +153,6 @@ bool Settings::LoadStadiums(QString fileName)
 			return false;
 	}
 
-	if (!stadiumGraph.LoadFromJson(graphJsonArray))
-		return false;
-
 	for (auto &arrayItem : souvenirJsonArray)
 	{
 		QJsonObject souvenirJson = arrayItem.toObject();
@@ -166,6 +163,9 @@ bool Settings::LoadStadiums(QString fileName)
 		else
 			return false;
 	}
+
+	if (!stadiumGraph.LoadFromJson(graphJsonArray))
+		return false;
 
 	return true;
 }
@@ -184,8 +184,8 @@ bool Settings::SaveStadiums()
 
 	QJsonObject jsonDoc;
 	QJsonArray  stadiumJsonArray;
-	QJsonArray  graphJsonArray;
 	QJsonArray  souvenirJsonArray;
+	QJsonArray  graphJsonArray;
 
 	for (auto &stadium : stadiums)
 		stadiumJsonArray.append(stadium.SaveToJson());
@@ -193,6 +193,9 @@ bool Settings::SaveStadiums()
 	for (auto &souvenir : souvenirs)
 		souvenirJsonArray.append(souvenir.SaveToJson());
 
+	graphJsonArray = stadiumGraph.SaveToJson();
+
+	jsonDoc["Graph"]     = graphJsonArray;
 	jsonDoc["Stadiums"]  = stadiumJsonArray;
 	jsonDoc["Souvenirs"] = souvenirJsonArray;
 

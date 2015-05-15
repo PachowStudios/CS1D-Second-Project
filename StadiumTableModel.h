@@ -14,6 +14,8 @@ public:
 	StadiumTableModel(QObject *parent = 0);
 
 	void ShowStadiums(StadiumList &stadiums);
+	void AddStadium(Stadium &stadium);
+	void RemoveStadium(int row);
 
 	int           rowCount(const QModelIndex &parent = QModelIndex()) const;
 	int           columnCount(const QModelIndex &parent = QModelIndex()) const;

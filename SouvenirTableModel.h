@@ -15,6 +15,7 @@ public:
 
 	void ShowSouvenirs(SouvenirList &souvenirs);
 	void AddSouvenir(Souvenir &souvenir);
+	void RemoveSouvenir(int row);
 
 	int           rowCount(const QModelIndex &parent = QModelIndex()) const;
 	int           columnCount(const QModelIndex &parent = QModelIndex()) const;
