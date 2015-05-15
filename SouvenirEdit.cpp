@@ -20,5 +20,5 @@ SouvenirEdit::SouvenirEdit(QWidget *parent)
 void SouvenirEdit::Save()
 {
 	AppSettings.SaveStadiums();
-	this->accept();
+	accept();
 }

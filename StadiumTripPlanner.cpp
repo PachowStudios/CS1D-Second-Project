@@ -14,6 +14,8 @@ StadiumTripPlanner::StadiumTripPlanner(QWidget *parent)
 			this,                      SLOT(PlanTrip()));
 	connect(ui.adminMenuLoginLogout,   SIGNAL(triggered()),
 			this,                      SLOT(LoginLogout()));
+	connect(ui.adminMenuEditStadiums,  SIGNAL(triggered()),
+			this,                      SLOT(EditStadiums()));
 	connect(ui.adminMenuEditSouvenirs, SIGNAL(triggered()),
 			this,                      SLOT(EditSouvenirs()));
 	connect(ui.buttons,                SIGNAL(rejected()),
@@ -26,6 +28,7 @@ StadiumTripPlanner::~StadiumTripPlanner()
 void StadiumTripPlanner::SetAdminOptionsEnabled(bool enabled)
 {
 	ui.adminMenuEditSouvenirs->setEnabled(enabled);
+	ui.adminMenuEditStadiums->setEnabled(enabled);
 }
 
 void StadiumTripPlanner::ViewStadiums() const
@@ -51,7 +54,7 @@ void StadiumTripPlanner::LoginLogout()
 		ui.adminMenuLoginLogout->setText("Login");
 
 		(new QMessageBox(QMessageBox::Information,
-			"", "You have been logged out."))->exec();
+			             "", "You have been logged out."))->exec();
 	}
 	else
 	{
@@ -59,10 +62,21 @@ void StadiumTripPlanner::LoginLogout()
 		{
 			loggedIn = true;
 			ui.adminMenuLoginLogout->setText("Logout");
+
+			(new QMessageBox(QMessageBox::Information,
+				             "", "You have been logged in."))->exec();
 		}
 	}
 
 	SetAdminOptionsEnabled(loggedIn);
+}
+
+void StadiumTripPlanner::EditStadiums() const
+{
+	if (!loggedIn)
+		return;
+
+	(new StadiumEdit)->exec();
 }
 
 void StadiumTripPlanner::EditSouvenirs() const

@@ -2,6 +2,7 @@
 #define STADIUMEDIT_H
 
 #include "ui_StadiumEdit.h"
+#include "StadiumTableModel.h"
 #include "Settings.h"
 
 #include <QDialog>
@@ -15,6 +16,11 @@ public:
 
 private:
 	Ui::StadiumEdit ui;
+
+	StadiumTableModel *stadiumTableModel = nullptr;
+
+	private slots:
+	void Save();
 };
 
 #endif

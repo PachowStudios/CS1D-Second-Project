@@ -6,6 +6,7 @@
 #include "TripPlanner.h"
 #include "CustomTripPlanner.h"
 #include "AdminLogin.h"
+#include "StadiumEdit.h"
 #include "SouvenirEdit.h"
 
 #include <QMainWindow>
@@ -31,6 +32,7 @@ private:
 	void PlanTrip() const;
 	void PlanCustomTrip() const;
 	void LoginLogout();
+	void EditStadiums() const;
 	void EditSouvenirs() const;
 };
 
