@@ -11,7 +11,7 @@ StadiumTripPlanner::StadiumTripPlanner(QWidget *parent)
 	connect(ui.planTripButton,         SIGNAL(clicked()),
 			this,                      SLOT(PlanTrip()));
 	connect(ui.planCustomTripButton,   SIGNAL(clicked()),
-			this,                      SLOT(PlanTrip()));
+			this,                      SLOT(PlanCustomTrip()));
 	connect(ui.calculateMstButton,     SIGNAL(clicked()),
 			this,                      SLOT(CalculateMST()));
 	connect(ui.adminMenuLoginLogout,   SIGNAL(triggered()),
