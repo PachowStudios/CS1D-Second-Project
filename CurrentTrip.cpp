@@ -27,17 +27,35 @@ CurrentTrip::CurrentTrip(StadiumList trip, QWidget *parent)
 	ui.purchasedSouvenirs->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeMode::Stretch);
 	ui.purchasedSouvenirs->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeMode::Fixed);
 
+	SetCurrentStadium(trip[currentStadiumIndex]);
+	tripStadiumsVisitedModel->AddStadium(trip[currentStadiumIndex]);
+
 	connect(ui.purchaseSouvenirButton, SIGNAL(clicked()),
 			this,                      SLOT(PurchaseSouvenir()));
 	connect(ui.nextButton,             SIGNAL(clicked()),
-			this,                      SLOT(NextStadium()));
+			this,                      SLOT(GoToNextStadium()));
 	connect(ui.cancelButton,           SIGNAL(clicked()),
 			this,                      SLOT(reject()));
 }
 
-void CurrentTrip::StartTrip()
+void CurrentTrip::SetCurrentStadium(const Stadium &stadium)
 {
+	ui.currentStadiumLabel->setText("Current Stadium: " + stadium.name);
+}
 
+void CurrentTrip::SetGrandTotal(double price)
+{
+	ui.grandTotalLabel->setText("Grand Total: " + QLocale().toCurrencyString(price));
+}
+
+void CurrentTrip::SetLegDistance(double distance)
+{
+	ui.legDistanceLabel->setText("Leg Distance: " + QString::number(distance));
+}
+
+void CurrentTrip::SetTotalDistance(double distance)
+{
+	ui.totalDistanceLabel->setText("Total Distance: " + QString::number(distance));
 }
 
 void CurrentTrip::PurchaseSouvenir()
@@ -47,11 +65,36 @@ void CurrentTrip::PurchaseSouvenir()
 	if (index.isValid())
 	{
 		purchasedSouvenirsModel->AddSouvenir(availableSouvenirs[index.row()]);
-		ui.grandTotalLabel->setText("Grand Total: " + QLocale().toCurrencyString(Souvenir::CalculateTotalPrice(purchasedSouvenirs)));
+		SetGrandTotal(Souvenir::CalculateTotalPrice(purchasedSouvenirs));
 	}
 }
 
-void CurrentTrip::NextStadium()
+void CurrentTrip::GoToNextStadium()
 {
+	if (currentStadiumIndex >= trip.count() - 1)
+		return;
 
+	currentStadiumIndex++;
+
+	Path nextPath = AppSettings.stadiumGraph.CalculatePath(trip[0].ID,
+														   trip[currentStadiumIndex].ID);
+	int pathDistance = AppSettings.stadiumGraph.CalculateDistance(nextPath);
+	legStadiumsVisited = AppSettings.PathToStadiums(nextPath);
+
+	legStadiumsVisitedModel->ShowStadiums(legStadiumsVisited);
+	tripStadiumsVisitedModel->AddStadium(trip[currentStadiumIndex]);
+
+	totalDistance += pathDistance;
+	SetLegDistance(pathDistance);
+	SetTotalDistance(totalDistance);
+	SetCurrentStadium(trip[currentStadiumIndex]);
+
+	if (currentStadiumIndex >= trip.count() - 1)
+	{
+		ui.nextButton->setText("Finish Trip");
+		disconnect(ui.nextButton, SIGNAL(clicked()),
+				   this,          SLOT(GoToNextStadium()));
+		connect(ui.nextButton, SIGNAL(clicked()),
+				this,          SLOT(close()));
+	}
 }

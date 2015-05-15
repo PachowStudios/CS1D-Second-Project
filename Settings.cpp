@@ -74,6 +74,16 @@ Souvenir& Settings::GetSouvenir(QString name)
 	                { return s.name == name; });
 }
 
+StadiumList Settings::PathToStadiums(Path path)
+{
+	StadiumList stadiumList = StadiumList();
+
+	for each (int id in path)
+		stadiumList.append(GetStadium(SearchBy::ID, QString::number(id)));
+
+	return stadiumList;
+}
+
 bool Settings::LoadCredentials()
 {
 	if (qSettings.contains(UsernamePath) &&

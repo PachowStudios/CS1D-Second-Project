@@ -27,10 +27,11 @@ public:
 
 	Settings();
 
-	bool      HasStadium(SearchBy searcyBy, QString searchTerm) const;
-	Stadium&  GetStadium(SearchBy searchBy, QString searchTerm);
-	bool      HasSouvenir(QString name) const;
-	Souvenir& GetSouvenir(QString name);
+	bool        HasStadium(SearchBy searcyBy, QString searchTerm) const;
+	Stadium&    GetStadium(SearchBy searchBy, QString searchTerm);
+	bool        HasSouvenir(QString name) const;
+	Souvenir&   GetSouvenir(QString name);
+	StadiumList PathToStadiums(Path path);
 
 	bool LoadCredentials();
 	bool SaveCredentials();

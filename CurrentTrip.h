@@ -19,12 +19,16 @@ public:
 	CurrentTrip(StadiumList trip, QWidget *parent = 0);
 
 private:
-	void StartTrip();
+	void SetCurrentStadium(const Stadium &stadium);
+	void SetLegDistance(double distance);
+	void SetTotalDistance(double distance);
+	void SetGrandTotal(double price);
 
 	Ui::CurrentTrip ui;
 
 	StadiumList trip;
-	int         currentStadium;
+	int         currentStadiumIndex = 0;
+	int         totalDistance = 0;
 
 	StadiumList  legStadiumsVisited;
 	StadiumList  tripStadiumsVisited;
@@ -38,7 +42,7 @@ private:
 
 	private slots:
 	void PurchaseSouvenir();
-	void NextStadium();
+	void GoToNextStadium();
 };
 
 #endif

@@ -22,7 +22,7 @@ public:
 	bool RemoveConnection(int a, int b);
 
 	QList<int> CalculatePath(int start, int finish) const;
-	int        CalculateDistance(int start, int finish) const;
+	int        CalculateDistance(QList<int> path) const;
 
 private:
 	QList<int> nodes;

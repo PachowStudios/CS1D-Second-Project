@@ -127,18 +127,17 @@ Path Graph::CalculatePath(int start, int finish) const
 		}
 	}
 
+	path.push_front(start);
+
 	return path;
 }
 
-int Graph::CalculateDistance(int start, int finish) const
+int Graph::CalculateDistance(QList<int> path) const
 {
-	QList<int> path = CalculatePath(start, finish);
 	int distance = 0;
 
 	if (path.count() == 0)
 		return -1;
-
-	path.push_front(start);
 
 	for (int i = 1; i < path.count(); i++)
 	{
