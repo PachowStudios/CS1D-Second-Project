@@ -4,6 +4,7 @@
 #include "ui_CustomTripPlanner.h"
 #include "StadiumListModel.h"
 #include "Settings.h"
+#include "CurrentTrip.h"
 
 #include <QDialog>
 #include <QMessageBox>

@@ -4,6 +4,16 @@ Souvenir::Souvenir(QString name, double price)
 	: name(name), price(price)
 { }
 
+double Souvenir::CalculateTotalPrice(const QList<Souvenir> &souvenirs)
+{
+	double price = 0.0;
+
+	for (auto &souvenir : souvenirs)
+		price += souvenir.price;
+
+	return price;
+}
+
 bool Souvenir::LoadFromJson(const QJsonObject &json)
 {
 	if (json.contains("Name") &&

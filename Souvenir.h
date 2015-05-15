@@ -11,6 +11,8 @@ public:
 	Souvenir() = default;
 	Souvenir(QString name, double price);
 
+	static double CalculateTotalPrice(const QList<Souvenir> &souvenirs);
+
 	bool LoadFromJson(const QJsonObject &json);
 	QJsonObject SaveToJson() const;
 

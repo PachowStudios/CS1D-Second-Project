@@ -15,6 +15,9 @@ CustomTripPlanner::CustomTripPlanner(QWidget *parent)
 	chosenStadiumsModel->ShowStadiums(chosenStadiums);
 	ui.chosenStadiums->setModel(chosenStadiumsModel);
 
+	disconnect(ui.buttons, SIGNAL(accepted()),
+			   this,       SLOT(accept()));
+
 	connect(ui.addButton,      SIGNAL(clicked()),
 			this,              SLOT(AddStadium()));
 	connect(ui.removeButton,   SIGNAL(clicked()),
@@ -75,6 +78,9 @@ void CustomTripPlanner::StartTrip()
 			             "", "You must select at least 2 stadiums to visit!"))->exec();
 		return;
 	}
-
-
+	else
+	{
+		close();
+		(new CurrentTrip(chosenStadiums))->exec();
+	}
 }
