@@ -31,6 +31,7 @@ private:
 	void ViewStadiums() const;
 	void PlanTrip() const;
 	void PlanCustomTrip() const;
+	void CalculateMST() const;
 	void LoginLogout();
 	void EditStadiums() const;
 	void EditSouvenirs() const;

@@ -23,6 +23,7 @@ public:
 
 	QList<int> CalculatePath(int start, int finish) const;
 	int        CalculateDistance(QList<int> path) const;
+	int        CalculateMST() const;
 
 private:
 	QList<int> nodes;

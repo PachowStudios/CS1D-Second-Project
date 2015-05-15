@@ -12,6 +12,8 @@ StadiumTripPlanner::StadiumTripPlanner(QWidget *parent)
 			this,                      SLOT(PlanTrip()));
 	connect(ui.planCustomTripButton,   SIGNAL(clicked()),
 			this,                      SLOT(PlanTrip()));
+	connect(ui.calculateMstButton,     SIGNAL(clicked()),
+			this,                      SLOT(CalculateMST()));
 	connect(ui.adminMenuLoginLogout,   SIGNAL(triggered()),
 			this,                      SLOT(LoginLogout()));
 	connect(ui.adminMenuEditStadiums,  SIGNAL(triggered()),
@@ -44,6 +46,13 @@ void StadiumTripPlanner::PlanTrip() const
 void StadiumTripPlanner::PlanCustomTrip() const
 {
 	(new CustomTripPlanner)->exec();
+}
+
+void StadiumTripPlanner::CalculateMST() const
+{
+	int MST = AppSettings.stadiumGraph.CalculateMST();
+	(new QMessageBox(QMessageBox::Information,
+		             "", "MST distance: " + QString::number(MST)))->exec();
 }
 
 void StadiumTripPlanner::LoginLogout()
