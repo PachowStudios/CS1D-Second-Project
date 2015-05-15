@@ -13,8 +13,25 @@ SouvenirEdit::SouvenirEdit(QWidget *parent)
 	ui.souvenirTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeMode::Stretch);
 	ui.souvenirTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeMode::Fixed);
 
-	connect(ui.buttons, SIGNAL(accepted()),
-			this,       SLOT(Save()));
+	connect(ui.addButton,    SIGNAL(clicked()),
+			this,            SLOT(AddSouvenir()));
+	connect(ui.removeButton, SIGNAL(clicked()),
+			this,            SLOT(RemoveSouvenir()));
+	connect(ui.saveButton,   SIGNAL(clicked()),
+			this,            SLOT(Save()));
+}
+
+void SouvenirEdit::AddSouvenir()
+{
+	souvenirTableModel->AddSouvenir(Souvenir("New Souvenir", 0));
+}
+
+void SouvenirEdit::RemoveSouvenir()
+{
+	QModelIndex index = ui.souvenirTable->selectionModel()->currentIndex();
+
+	if (index.isValid())
+		souvenirTableModel->RemoveSouvenir(index.row());
 }
 
 void SouvenirEdit::Save()

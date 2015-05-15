@@ -20,6 +20,8 @@ private:
 	SouvenirTableModel *souvenirTableModel = nullptr;
 
 	private slots:
+	void AddSouvenir();
+	void RemoveSouvenir();
 	void Save();
 };
 
