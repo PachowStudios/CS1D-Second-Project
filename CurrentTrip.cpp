@@ -76,7 +76,7 @@ void CurrentTrip::GoToNextStadium()
 
 	currentStadiumIndex++;
 
-	Path nextPath = AppSettings.stadiumGraph.CalculatePath(trip[0].ID,
+	Path nextPath = AppSettings.stadiumGraph.CalculatePath(trip[currentStadiumIndex - 1].ID,
 														   trip[currentStadiumIndex].ID);
 	int pathDistance = AppSettings.stadiumGraph.CalculateDistance(nextPath);
 	legStadiumsVisited = AppSettings.PathToStadiums(nextPath);
