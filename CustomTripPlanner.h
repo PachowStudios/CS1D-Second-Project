@@ -1,10 +1,10 @@
-#ifndef TRIPPLANNER_H
-#define TRIPPLANNER_H
+#ifndef CUSTOMTRIPPLANNER_H
+#define CUSTOMTRIPPLANNER_H
 
 #include "ui_CustomTripPlanner.h"
 #include "StadiumListModel.h"
-#include "Settings.h"
 #include "CurrentTrip.h"
+#include "Settings.h"
 
 #include <QDialog>
 #include <QMessageBox>

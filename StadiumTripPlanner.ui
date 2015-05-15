@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>371</width>
+    <width>502</width>
     <height>167</height>
    </rect>
   </property>
@@ -25,7 +25,7 @@
      <rect>
       <x>10</x>
       <y>110</y>
-      <width>351</width>
+      <width>481</width>
       <height>31</height>
      </rect>
     </property>
@@ -44,7 +44,7 @@
      <rect>
       <x>12</x>
       <y>15</y>
-      <width>351</width>
+      <width>481</width>
       <height>31</height>
      </rect>
     </property>
@@ -78,9 +78,9 @@
    <widget class="QPushButton" name="viewStadiumsButton">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>80</x>
       <y>60</y>
-      <width>121</width>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
@@ -93,12 +93,25 @@
      <rect>
       <x>200</x>
       <y>60</y>
-      <width>121</width>
+      <width>101</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
      <string>Plan Trip</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="planCustomTripButton">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>60</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Plan Custom Trip</string>
     </property>
    </widget>
   </widget>
@@ -107,7 +120,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>371</width>
+     <width>502</width>
      <height>21</height>
     </rect>
    </property>
